@@ -98,7 +98,9 @@ $user = $_SESSION['user'];
        
             <td><center><a href="show_addjob.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
             <td><center><a href="up_addjob.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
-            <td><center><a href="delete_mokoall.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-danger">ลบ</button></a></td></center>
+            <td><center><a href="JavaScript:if(confirm('Confirm Delete?') == true){window.location='delete_mokoall.php?j_number=<?php echo $row["j_number"];?>';}"><button class="btn btn-danger">ลบ</button></a></td></center>
+          
+
        </tr>
 
 

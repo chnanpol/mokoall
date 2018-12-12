@@ -192,7 +192,7 @@ $sql1 = "INSERT INTO tbl_addjob
 
 
 
-$result5 = mysqli_query($con, $sql5) or die ("Error in query: $sql5 " . mysqli_error($con));
+$result5 = mysqli_query($con, $sql5) ;
  
 
 
@@ -200,18 +200,77 @@ $result5 = mysqli_query($con, $sql5) or die ("Error in query: $sql5 " . mysqli_e
 	//ปิดการเชื่อมต่อ database
 	mysqli_close($con);
 	//จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
-	if($result5){
+	if($result){
 		echo "<script type='text/javascript'>";
 	echo "alert('Save Succesfuly');";
 	echo "window.location = 'mainpage.php'; ";
 	echo "</script>";
 		exit();
 	
-	}else {
-	
-			echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
-		exit();
+		}else {
+		
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+			exit();
 		}
+	
+	
+		if($result2){
+			echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location = 'mainpage.php'; ";
+		echo "</script>";
+			exit();
+		
+			}else {
+			
+					echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+
+			if($result3){
+				echo "<script type='text/javascript'>";
+			echo "alert('Save Succesfuly');";
+			echo "window.location = 'mainpage.php'; ";
+			echo "</script>";
+				exit();
+			
+				}else {
+				
+						echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+					exit();
+				}
+
+				if($result4){
+					echo "<script type='text/javascript'>";
+				echo "alert('Save Succesfuly');";
+				echo "window.location = 'mainpage.php'; ";
+				echo "</script>";
+					exit();
+				
+					}else {
+					
+							echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+						exit();
+					}
+	
+					
+				if($result5){
+					echo "<script type='text/javascript'>";
+				echo "alert('Save Succesfuly');";
+				echo "window.location = 'mainpage.php'; ";
+				echo "</script>";
+					exit();
+				
+					}else {
+					
+							echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+						exit();
+					}
+	
+	
+	
+	
+	
 	}
 
 

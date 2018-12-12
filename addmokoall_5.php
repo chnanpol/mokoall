@@ -33,7 +33,7 @@ th {
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <title>แก้ไขข้อมูลสินค้า</title>
+     <title>แก้เอกสาร</title>
   
    
 
@@ -70,7 +70,7 @@ th {
     </header>
     <br>
     <div class="container bg-light rounded">
-	<form method="POST" id="upform" action="addjob_moloall5.php" >
+	<form method="POST" id="upform" action="addjob_moloall5_bn.php" >
 
 	<br>
 		<h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2>
@@ -138,210 +138,329 @@ th {
 				<h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2> <br>
 		
 <center>	
+
 <table border="2px"> 
     <tr>
 			<th>  <center>    หัวข้อ </th>  </center>
- <th>   <center>   จำนวนชั่วโมง ตามแผนการสอน </th> </center>
- <th>  <center> จำนวนชั่วโมงสอนจริง</th> </center>
+ <th>   <center> จำนวนชั่วโมง ตามแผนการสอน </th> </center>
+ <th>  <center> จำนวนชั่วโมง ที่สอนจริง</th> </center>
  <th>  <center>  ระบุสาเหตุที่การสอนจริงต่างจากแผนการสอน หากมีความแตกต่างเกิน 25% </th> </center>
 	</tr>
 	
 	<tr>
+		
 		<td>
-			<div class="form-group">
+
+          <div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 1" name="Topics_1" class="form-control" > <?php echo $rowpro['Topics_1']; ?> </textarea>
+				<textarea id="Topics1 " name="Topics1" class="form-control" >  </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 2" name="Topics2" class="form-control" > <?php echo $rowpro['Topics_2']; ?> </textarea>
+				<textarea id="Topics2" name="Topics2" class="form-control" >  </textarea>
             </div>
         
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 3" name="Topics3" class="form-control" > <?php echo $rowpro['Topics_3']; ?> </textarea>
+				<textarea id="Topics3" name="Topics3" class="form-control" >  </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 4" name="Topics 4" class="form-control" > <?php echo $rowpro['Topics_4']; ?> </textarea>
-         
-            </div>	<div class="form-group">
+				<textarea id="Topics4" name="Topics4" class="form-control" >  </textarea>
+            </div>
+            
+            	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 5 " name="Topics 5 " class="form-control" > <?php echo $rowpro['Topics_5']; ?> </textarea>
+				<textarea id="Topics5" name="Topics5" class="form-control" >  </textarea>
+            </div>
+
+			 <div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Topics6 " name="Topics6" class="form-control" > </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 6" name="Topics 6" class="form-control" > <?php echo $rowpro['Topics_6']; ?> </textarea>
-            </div>	<div class="form-group">
+				<textarea id="Topics7" name="Topics7" class="form-control" > </textarea>
+            </div>
+        
+        	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 7" name="Topics 7" class="form-control" > <?php echo $rowpro['Topics_7']; ?> </textarea>
+				<textarea id="Topics8" name="Topics8" class="form-control" >  </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 8" name="Topics 8" class="form-control" > <?php echo $rowpro['Topics_8']; ?> </textarea>
-            </div>	<div class="form-group">
+				<textarea id="Topics9" name="Topics9" class="form-control" > </textarea>
+            </div>
+            
+            	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 9" name="Topics 9" class="form-control" > <?php echo $rowpro['Topics_9']; ?> </textarea>
+				<textarea id="Topics10" name="Topics10" class="form-control" >  </textarea>
+            </div>
+
+			 <div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Topics11 " name="Topics11" class="form-control" >  </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Topics 10" name="Topics 10" class="form-control" > <?php echo $rowpro['Topics_10']; ?> </textarea>
+				<textarea id="Topics12" name="Topics12" class="form-control" >  </textarea>
             </div>
+        
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Topics13" name="Topics13" class="form-control" >  </textarea>
+            </div>
+		
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Topics14" name="Topics14" class="form-control" >  </textarea>
+            </div>
+            
+            	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Topics15" name="Topics15" class="form-control" ></textarea>
+            </div>
+			
         </td>					
 
 		<td>
-        <div class="form-group">
+			<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 1" name="hour According 1" class="form-control" > <?php echo $rowpro['hour1']; ?> </textarea>
+				<input id="Week1" name="Week1" class="form-control" type="number">
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 2" name="hour According 2" class="form-control" > <?php echo $rowpro['hour2']; ?> </textarea>
+				<input id="Week2" name="Week2" class="form-control"  type="number">
             </div>
         
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 3" name="hour According 3" class="form-control" > <?php echo $rowpro['hour3']; ?> </textarea>
+				<input id="Week3" name="Week3" class="form-control"  type="number" >
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 4" name="hour According 4" class="form-control" > <?php echo $rowpro['hour4']; ?> </textarea>
-            </div>
-            
-            	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour According 5" name="hour According 5" class="form-control" > <?php echo $rowpro['hour5']; ?> </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour According 6" name="hour According 6" class="form-control" > <?php echo $rowpro['hour6']; ?> </textarea>
+				<input id="Week4" name="Week4" class="form-control"  type="number" > 
+         
             </div>	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 7" name="hour According 7" class="form-control" > <?php echo $rowpro['hour7']; ?> </textarea>
+				<input  id="Week5" name="Week5" class="form-control"  >
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 8" name="hour According 8" class="form-control" > <?php echo $rowpro['hour8']; ?> </textarea>
+				<textarea id="Week6" name="Week6" class="form-control" > </textarea>
             </div>	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 9" name="hour According 9" class="form-control" > <?php echo $rowpro['hour9']; ?> </textarea>
+				<textarea id="Week7" name="Week7" class="form-control" > </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour According 10" name="hour According 10" class="form-control" > <?php echo $rowpro['hour10']; ?> </textarea>
+				<textarea id="Week8" name="Week8" class="form-control" ></textarea>
+            </div>	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week9" name="Week9" class="form-control" >  </textarea>
             </div>
+		
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week10" name="Week10" class="form-control" ></textarea>
+            </div>
+			</div>	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week11" name="Week11" class="form-control" >  </textarea>
+            </div>
+		
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week12" name="Week12" class="form-control" >  </textarea>
+            </div>	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week13" name="Week13" class="form-control" >  </textarea>
+            </div>
+		
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week14" name="Week14" class="form-control" >  </textarea>
+            </div>	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Week15" name="Week15" class="form-control" >  </textarea>
+            </div>
+
+            </td>
+		<td>
+        <div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour1" name="hour1" class="form-control" >  </textarea>
+            </div>
+		
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour2" name="hour2" class="form-control" >  </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour3" name="hour3" class="form-control" > </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour4" name="hour4" class="form-control" >  </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour5" name="hour5" class="form-control" > </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour6" name="hour6" class="form-control" > </textarea>
+            </div>
+			
+			<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour7" name="hour7" class="form-control" > </textarea>
+            </div>
+			
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour8" name="hour8" class="form-control" >  </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour9" name="hour9" class="form-control" > </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour10" name="hour10" class="form-control" >  </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour11" name="hour11" class="form-control" > </textarea>
+            </div>
+
+				
+				<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour12" name="hour12" class="form-control" > </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour13" name="hour13" class="form-control" > </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour14" name="hour14" class="form-control" >  </textarea>
+            </div>
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="hour15" name="hour15" class="form-control" >  </textarea>
+            </div>
+			
+
+        
 		</td>				
+	
+	
 	
 		<td>
         <div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 1" name="hour teaches 1" class="form-control" > <?php echo $rowpro['hour1']; ?> </textarea>
+				<textarea id="Instructor1" name="Instructor1" class="form-control" > </textarea>
             </div>
 		
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 2" name="hour teaches 2" class="form-control" > <?php echo $rowpro['hour2']; ?> </textarea>
+				<textarea id="Instructor2" name="Instructor2" class="form-control" > </textarea>
             </div>
-        
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 3" name="hour teaches 3" class="form-control" > <?php echo $rowpro['hour3']; ?> </textarea>
+				<textarea id="Instructor3" name="Instructor3" class="form-control" ></textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 4" name="hour teaches 4" class="form-control" > <?php echo $rowpro['hour4']; ?> </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour teaches 5" name="hour teaches 5" class="form-control" > <?php echo $rowpro['hour5']; ?> </textarea>
+				<textarea id="Instructor4" name="Instructor4" class="form-control" ></textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 6" name="hour teaches 6" class="form-control" > <?php echo $rowpro['hour6']; ?> </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour teaches 7" name="hour teaches 7" class="form-control" > <?php echo $rowpro['hour7']; ?> </textarea>
+				<textarea id="Instructor5" name="Instructor5" class="form-control" ></textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 8" name="hour teaches 8" class="form-control" > <?php echo $rowpro['hour8']; ?> </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour teaches 9" name="hour teaches 9" class="form-control" > <?php echo $rowpro['hour9']; ?> </textarea>
+				<textarea id="Instructor6" name="Instructor6" class="form-control" > </textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="hour teaches 10" name="hour teaches 10" class="form-control" > <?php echo $rowpro['hour10']; ?> </textarea>
+				<textarea id="Instructor7" name="Instructor7" class="form-control" > </textarea>
             </div>
-		</td>				
-	
-	
-		<td>
-        <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Identify reasons 1" name="Identify reasons 1" class="form-control" > </textarea>
-            </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 2" name="Identify reasons 2" class="form-control" >  </textarea>
+				<textarea id="Instructor8" name="Instructor8" class="form-control" >  </textarea>
             </div>
-        
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 3" name="Identify reasons 3" class="form-control" > </textarea>
+				<textarea id="Instructor9" name="Instructor9" class="form-control" > </textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 4" name="Identify reasons 4" class="form-control" > </textarea>
+				<textarea id="Instructor10" name="Instructor10" class="form-control" >  </textarea>
             </div>
-            
-            	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Identify reasons 5" name="Identify reasons 5" class="form-control" >  </textarea>
-            </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 6" name="Identify reasons 6" class="form-control" > </textarea>
-            </div>	
-            
-            <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Identify reasons 7" name="Identify reasons 7" class="form-control" > </textarea>
+				<textarea id="Instructor11" name="Instructor11" class="form-control" > </textarea>
             </div>
-		
+
+				
+				<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Instructor12" name="Instructor12" class="form-control" >  </textarea>
+            </div>
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 8" name="Identify reasons 8" class="form-control" >  </textarea>
-            </div>	
-            <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Identify reasons 9" name="Identify reasons 9" class="form-control" > </textarea>
+				<textarea id="Instructor13" name="Instructor13" class="form-control" >  </textarea>
             </div>
-		
+			
         	<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Identify reasons 10" name="Identify reasons 10" class="form-control" >  </textarea>
+				<textarea id="Instructor14" name="Instructor14" class="form-control" > </textarea>
             </div>
-		</td>				
+			
+        	<div class="form-group">
+                <label class="form-text"></label>
+				<textarea id="Instructor15" name="Instructor15" class="form-control" > </textarea>
+            </div>
+			
 	</tr> 
 	
 	</table>
+
+    
     <br>    <br>    <br>   
     <h2> 2. หัวข้อที่สอนไม่ครอบคลุมตามแผน </H2>
  
@@ -356,7 +475,7 @@ th {
 		<td>
 			<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Lecture" name="Lecture" class="form-control" > <?php echo $rowpro['lecture_hours']; ?> </textarea>
+				<textarea id="Topics_covered" name="Topics_covered" class="form-control" > </textarea>
 
 		
           </div>
@@ -364,7 +483,7 @@ th {
         <td>
 			<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Lecture" name="Lecture" class="form-control" > <?php echo $rowpro['lecture_hours']; ?> </textarea>
+				<textarea id="Significance " name="Significance" class="form-control" >  </textarea>
 
 		
           </div>
@@ -372,7 +491,7 @@ th {
         <td>
 			<div class="form-group">
                 <label class="form-text"></label>
-				<textarea id="Lecture" name="Lecture" class="form-control" > <?php echo $rowpro['lecture_hours']; ?> </textarea>
+				<textarea id="Compensation" name="Compensation" class="form-control" >  </textarea>
 
 		
           </div>
@@ -422,7 +541,7 @@ th {
      </td>		
      <td>
      <center>
-     <select name="grop1">
+     <select name="group1">
     <option value="มี">มี</option>
     <option value="ไม่มี">ไม่มี</option>
   </select>
@@ -473,7 +592,7 @@ th {
    
      <td>
 <center>
-    <select name="grop2">
+    <select name="group2">
     <option value="มี">มี</option>
     <option value="ไม่มี">ไม่มี</option>
   </select>
@@ -518,7 +637,7 @@ th {
    
      <td>
      <center>
-       <select name="grop3">
+       <select name="group3">
     <option value="มี">มี</option>
     <option value="ไม่มี">ไม่มี</option>
   </select>
@@ -566,7 +685,7 @@ th {
    
      <td>
      <center>
-     <select name="grop4">
+     <select name="group4">
     <option value="มี">มี</option>
     <option value="ไม่มี">ไม่มี</option>
   </select>
@@ -612,7 +731,7 @@ th {
    
      <td>
      <center>
-     <select name="grop5">
+     <select name="group5">
     <option value="มี">มี</option>
     <option value="ไม่มี">ไม่มี</option>
   </select>
@@ -636,7 +755,7 @@ th {
  
  <div class="col-12">
  <label class="form-text"> ข้อเสนอการดำเนินการเพื่อปรับปรุงวิธีสอน (ซึ่งได้จากปัญหาที่พบในข้อ 2.3) </label>
-              <textarea id="Improveteaching " name="Improveteaching" class="form-control"> </textarea> 
+              <textarea id="Improveteaching" name="Improveteaching" class="form-control"> </textarea> 
     </div>
 			
 <br>
@@ -648,17 +767,17 @@ th {
 
  <div class="col-12">
  <label class="form-text"> 1. จำนวนนักศึกษาที่ลงทะเบียนเรียน</label>
-              <input id="students enrolled " name="students enrolled" class="form-control" type="number"> 
+              <input id="students_enrolled " name="students_enrolled" class="form-control" type="number"> 
     </div>
     
  <div class="col-12">
  <label class="form-text"> 2. จำนวนนักศึกษาที่คงอยู่เมื่อสิ้นสุดภาคการศึกษา  </label>
-              <input id="students remaining " name="students remaining" class="form-control"  type="number"> 
+              <input id="students_remaining " name="students_remaining" class="form-control"  type="number"> 
     </div>
     
  <div class="col-12">
  <label class="form-text">3. จำนวนนักศึกษาที่ถอน (W) </label>
-              <input id="students withdrawn " name="students withdrawn" class="form-control"  type="number"> 
+              <input id="students_withdrawn" name="students_withdrawn" class="form-control"  type="number"> 
     </div>
 
 
@@ -683,7 +802,7 @@ th {
 			
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="b+" name="b+" class="form-control" > 
+				<input id="bp" name="bp" class="form-control" > 
                 
                 
 			<div class="form-group">
@@ -693,7 +812,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="c+" name="c+" class="form-control" > 
+				<input id="cp" name="cp" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -703,7 +822,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="d+" name="d+" class="form-control" > 
+				<input id="dp" name="dp" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -735,7 +854,7 @@ th {
 			
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="b+1" name="b+1" class="form-control" > 
+				<input id="bp1" name="bp1" class="form-control" > 
                 
                 
 			<div class="form-group">
@@ -745,7 +864,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="c+1" name="c+1" class="form-control" > 
+				<input id="cp1" name="cp1" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -755,7 +874,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="d+1" name="d+1" class="form-control" > 
+				<input id="dp1" name="dp1" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -786,7 +905,7 @@ th {
 			
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="b+2" name="b+2" class="form-control" > 
+				<input id="bp2" name="bp2" class="form-control" > 
                 
                 
 			<div class="form-group">
@@ -796,7 +915,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="c+2" name="c+2" class="form-control" > 
+				<input id="cp2" name="cp2" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -806,7 +925,7 @@ th {
                 	
 			<div class="form-group">
                 <label class="form-text"></label>
-				<input id="d+2" name="d+2" class="form-control" > 
+				<input id="dp2" name="dp2" class="form-control" > 
 
                 	
 			<div class="form-group">
@@ -835,7 +954,7 @@ th {
  
 <div class="col-12">
  <label class="form-text">  ปัจจัยที่ทำให้ระดับคะแนนผิดปกติ (ถ้ามี) </label>
-              <textarea id="Factors to Rating " name="Factors to Rating" class="form-control"> </textarea> 
+              <textarea id="Factors_to_Rating" name="Factors_to_Rating" class="form-control"> </textarea> 
     </div>
 
 <div class="col-12">
@@ -845,7 +964,7 @@ th {
 
     <div class="col-12">
  <label class="form-text"> ความคลาดเคลื่อนด้านกำหนดเวลาการประเมิน </label>
-              <textarea id="Time deviation " name="Time deviation" class="form-control"> </textarea> 
+              <textarea id="Time_deviation " name="Time_deviation" class="form-control"> </textarea> 
     </div>
 
     <div class="col-12">
@@ -856,8 +975,8 @@ th {
 <h2>การทวนสอบผลสัมฤทธิ์ของนักศึกษา</h2>
 
 <div class="col-12">
- <label class="form-text">  วิธีการทวนสอบ </label>
-              <textarea id="Verification method" name="Verification method" class="form-control"> </textarea> 
+ <label class="form-text">  วิธีการทดสอบ </label>
+              <textarea id="Verification_method" name="Verification_method" class="form-control"> </textarea> 
     </div>
 
 <div class="col-12">
@@ -874,14 +993,14 @@ th {
       
 <div class="col-12">
  <label class="form-text">  ปัญหาในการใช้แหล่งทรัพยากรประกอบการเรียนการสอน (ถ้ามี)</label>
-              <textarea id=" problem of using " name=" problem of using " class="form-control"> </textarea> 
+              <textarea id=" problem_of_using" name=" problem_of_using" class="form-control"> </textarea> 
     </div>  
       
       
            
 <div class="col-12">
  <label class="form-text">   ผลกระทบ </label>
-              <textarea id=" effect " name=" effect  " class="form-control"> </textarea> 
+              <textarea id=" effect" name=" effect" class="form-control"> </textarea> 
 
     </div>  
  
@@ -892,13 +1011,13 @@ th {
       
       <div class="col-12">
  <label class="form-text">  ปัญหาด้านการบริหารและองค์กร (ถ้ามี)  </label>
-              <textarea id="Administrative  " name="Administrative  " class="form-control"> </textarea> 
+              <textarea id="Administrative" name="Administrative" class="form-control"> </textarea> 
 
     </div>  
       
     <div class="col-12">
  <label class="form-text">  ผลกระทบต่อผลการเรียนรู้ของนักศึกษา </label>
-              <textarea id="Impact" name="Impact " class="form-control"> </textarea> 
+              <textarea id="Impact" name="Impact" class="form-control"> </textarea> 
               </div>
               <br>
 
@@ -907,19 +1026,19 @@ th {
 
 <div class="col-12">
  <label class="form-text">   ผลการประเมินรายวิชาโดยนักศึกษา (แนบเอกสาร)  </label>
-              <textarea id=" Student Evaluation " name=" Student Evaluation " class="form-control"> </textarea> 
+              <textarea id=" Student_Evaluation " name=" Student_Evaluation" class="form-control"> </textarea> 
     </div>  
 
 
 <div class="col-12">
  <label class="form-text">   ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยนักศึกษา  </label>
-              <textarea id=" Critical " name=" Critical  " class="form-control"> </textarea> 
+              <textarea id=" Critical" name=" Critical" class="form-control"> </textarea> 
     </div>  
 
 
 <div class="col-12">
  <label class="form-text">   ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ   </label>
-              <textarea id=" comments " name=" comments  " class="form-control"> </textarea> 
+              <textarea id=" comments" name=" comments" class="form-control"> </textarea> 
     </div>  
 
 
@@ -927,12 +1046,12 @@ th {
 
 <div class="col-12">
  <label class="form-text">  ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยคณะกรรมการ   </label>
-              <textarea id=" Critical 1 " name=" Critical 1" class="form-control"> </textarea> 
+              <textarea id=" Critical_1 " name=" Critical_1" class="form-control"> </textarea> 
     </div>  
 
 <div class="col-12">
  <label class="form-text">   ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ   </label>
-              <textarea id=" comments 1 " name=" comments 1" class="form-control"> </textarea> 
+              <textarea id=" comments_1 " name=" comments_1" class="form-control"> </textarea> 
     </div> 
       <hr>
 <br>
@@ -951,7 +1070,7 @@ th {
     </div> 
     <div class="col-12">
  <label class="form-text">   การดำเนินการอื่นๆ ในการปรับปรุงรายวิชา  </label>
-              <textarea id=" Other actions " name="Other actions" class="form-control"> </textarea> 
+              <textarea id=" Other_actions " name="Other_actions" class="form-control"> </textarea> 
     </div> 
     <br>
    <h2>  ข้อเสนอแผนการปรับปรุงสำหรับภาคการศึกษา / ปีการศึกษาต่อไป </h2>
@@ -965,11 +1084,11 @@ th {
    
     <div class="col-12">
  <label class="form-text"> กำหนดเวลาที่แล้วเสร็จ</label>
-              <textarea id="Time limit" name="Time limit" class="form-control"> </textarea> 
+              <textarea id="Time_limit" name="Time_limit" class="form-control"> </textarea> 
     </div> 
     <div class="col-12">
  <label class="form-text">  ผู้รับผิดชอบ  </label>
-              <textarea id="responsible person" name="responsible person" class="form-control"> </textarea> 
+              <textarea id="responsible_person" name="responsible_person" class="form-control"> </textarea> 
     </div> 
     <div class="col-12">
  <label class="form-text">ข้อเสนอแนะของอาจารย์ผู้รับผิดชอบรายวิชาต่ออาจารย์ผู้รับผิดชอบหลักสูตร  </label>

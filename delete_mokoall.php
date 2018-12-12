@@ -17,7 +17,7 @@
             AND `group4`.`j_number` =`tbl_addjob`.`j_number`";
    
    
-$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
+$result = mysqli_query($con, $sql);
 mysqli_close($con);
 	//จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
 	if($result1){
@@ -29,7 +29,7 @@ mysqli_close($con);
 	
 	}else {
 	
-			echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+			echo "<script>alert('ทำการลบข้อมูลเรียบร้อย');window.history.back()();</script>";
 		exit();
 		}   
 

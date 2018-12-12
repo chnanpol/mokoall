@@ -446,327 +446,404 @@ th {
 
 </h5>
 
-
-<table border="2px"> 
-    <tr>
-			<th>  <center>    สัปดาห์ </th>  </center>
- <th>   <center>   หัวข้อ </th> </center>
- <th>  <center> จำนวนชั่วโมง</th> </center>
- <th>  <center>  ผู้สอน </th> </center>
-	</tr>
-	
-	<tr>
-		<td>
-			<div class="form-group">
-                <label class="form-text"></label>
-				<input id="Week1" name="Week1" class="form-control" type="number">
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<input id="Week2" name="Week2" class="form-control"  type="number">
-            </div>
-        
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<input id="Week3" name="Week3" class="form-control"  type="number" >
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<input id="Week4" name="Week4" class="form-control"  type="number" > 
-         
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<input  id="Week5" name="Week5" class="form-control"  >
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week6" name="Week6" class="form-control" > </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week7" name="Week7" class="form-control" > </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week8" name="Week8" class="form-control" ></textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week9" name="Week9" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week10" name="Week10" class="form-control" ></textarea>
-            </div>
-			</div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week11" name="Week11" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week12" name="Week12" class="form-control" >  </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week13" name="Week13" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week14" name="Week14" class="form-control" >  </textarea>
-            </div>	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Week15" name="Week15" class="form-control" >  </textarea>
-            </div>
-		
-        	
-        </td>					
-
-		<td>
-        <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics1 " name="Topics1" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics2" name="Topics2" class="form-control" >  </textarea>
-            </div>
-        
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics3" name="Topics3" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics4" name="Topics4" class="form-control" >  </textarea>
-            </div>
-            
-            	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics5" name="Topics5" class="form-control" >  </textarea>
-            </div>
-
+				<table border="2px"> 
+	 <tr>
+  <th>  <center>    สัปดาห์ </th>  </center>
+  <th>   <center>   หัวข้อ </th> </center>
+  <th>  <center> จำนวนชั่วโมง</th> </center>
+  <th>  <center>  ผู้สอน </th> </center>
+	 </tr>
+	 
+	 <tr>
+		 <td>
 			 <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics6 " name="Topics6" class="form-control" > </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics7" name="Topics7" class="form-control" > </textarea>
-            </div>
-        
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics8" name="Topics8" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics9" name="Topics9" class="form-control" > </textarea>
-            </div>
-            
-            	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics10" name="Topics10" class="form-control" >  </textarea>
-            </div>
-
+				 <label class="form-text"></label>
+				 <input id="Week1" name="Week1" class="form-control" type="number" value="<?php echo $rowpro['Week1']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
 			 <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics11 " name="Topics11" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics12" name="Topics12" class="form-control" >  </textarea>
-            </div>
-        
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics13" name="Topics13" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics14" name="Topics14" class="form-control" >  </textarea>
-            </div>
-            
-            	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Topics15" name="Topics15" class="form-control" ></textarea>
-            </div>
-		
-		</td>				
-	
-		<td>
-        <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour1" name="hour1" class="form-control" >  </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour2" name="hour2" class="form-control" >  </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour3" name="hour3" class="form-control" > </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour4" name="hour4" class="form-control" >  </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour5" name="hour5" class="form-control" > </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour6" name="hour6" class="form-control" > </textarea>
-            </div>
-			
-			<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour7" name="hour7" class="form-control" > </textarea>
-            </div>
-			
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour8" name="hour8" class="form-control" >  </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour9" name="hour9" class="form-control" > </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour10" name="hour10" class="form-control" >  </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour11" name="hour11" class="form-control" > </textarea>
-            </div>
-
+				 <label class="form-text"></label>
+				 <textarea id="Topics1" name="Topics1" class="form-control" ><?php echo $rowpro['Topics_1']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour1" name="hour1" class="form-control"  type="number"value="<?php echo $rowpro['hour1']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
 				
-				<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour12" name="hour12" class="form-control" > </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour13" name="hour13" class="form-control" > </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour14" name="hour14" class="form-control" >  </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="hour15" name="hour15" class="form-control" >  </textarea>
-            </div>
-			
-
-        
-		</td>				
-	
-	
-	
-		<td>
-        <div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor1" name="Instructor1" class="form-control" ><?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-		
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor2" name="Instructor2" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor3" name="Instructor3" class="form-control" ><?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor4" name="Instructor4" class="form-control" ><?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor5" name="Instructor5" class="form-control" > <?php require 'get_namethacher.php' ?></textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor6" name="Instructor6" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor7" name="Instructor7" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor8" name="Instructor8" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor9" name="Instructor9" class="form-control" > <?php require 'get_namethacher.php' ?></textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor10" name="Instructor10" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor11" name="Instructor11" class="form-control" > <?php require 'get_namethacher.php' ?></textarea>
-            </div>
-
+				 <input id="Instructor1" name="Instructor1" class="form-control"   value="<?php echo $rowpro['Instructor1']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week2" name="Week2" class="form-control" type="number" value="<?php echo $rowpro['Week2']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics2" name="Topics2" class="form-control" ><?php echo $rowpro['Topics_2']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour2" name="hour2" class="form-control"  type="number"value="<?php echo $rowpro['hour2']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
 				
-				<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor12" name="Instructor12" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor13" name="Instructor13" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor14" name="Instructor14" class="form-control" > <?php require 'get_namethacher.php' ?></textarea>
-            </div>
-			
-        	<div class="form-group">
-                <label class="form-text"></label>
-				<textarea id="Instructor15" name="Instructor15" class="form-control" > <?php require 'get_namethacher.php' ?> </textarea>
-            </div>
-			
-	</tr> 
-	
-	</table>
+				 <input id="Instructor2" name="Instructor2" class="form-control"   value="<?php echo $rowpro['Instructor2']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week3" name="Week3" class="form-control" type="number" value="<?php echo $rowpro['Week3']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics3" name="Topics3" class="form-control" ><?php echo $rowpro['Topics_3']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour3" name="hour3" class="form-control"  type="number"value="<?php echo $rowpro['hour3']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor3" name="Instructor3" class="form-control"   value="<?php echo $rowpro['Instructor3']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week5" name="Week5" class="form-control" type="number" value="<?php echo $rowpro['Week5']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics5" name="Topics5" class="form-control" ><?php echo $rowpro['Topics_5']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour5" name="hour5" class="form-control"  type="number"value="<?php echo $rowpro['hour5']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor5" name="Instructor5" class="form-control"   value="<?php echo $rowpro['Instructor5']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week6" name="Week6" class="form-control" type="number" value="<?php echo $rowpro['Week6']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics6" name="Topics6" class="form-control" ><?php echo $rowpro['Topics_6']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour6" name="hour6" class="form-control"  type="number"value="<?php echo $rowpro['hour6']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor6" name="Instructor6" class="form-control"   value="<?php echo $rowpro['Instructor6']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week7" name="Week7" class="form-control" type="number" value="<?php echo $rowpro['Week7']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics7" name="Topics7" class="form-control" ><?php echo $rowpro['Topics_7']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour7" name="hour7" class="form-control"  type="number"value="<?php echo $rowpro['hour7']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor7" name="Instructor7" class="form-control"   value="<?php echo $rowpro['Instructor7']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week8" name="Week8" class="form-control" type="number" value="<?php echo $rowpro['Week8']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics8" name="Topics8" class="form-control" ><?php echo $rowpro['Topics_8']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour8" name="hour8" class="form-control"  type="number"value="<?php echo $rowpro['hour8']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor8" name="Instructor8" class="form-control"   value="<?php echo $rowpro['Instructor8']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week9" name="Week9" class="form-control" type="number" value="<?php echo $rowpro['Week9']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics9" name="Topics9" class="form-control" ><?php echo $rowpro['Topics_9']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour9" name="hour9" class="form-control"  type="number"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor9" name="Instructor9" class="form-control"   value="<?php echo $rowpro['Instructor9']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week10" name="Week10" class="form-control" type="number" value="<?php echo $rowpro['Week10']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics10" name="Topics10" class="form-control" ><?php echo $rowpro['Topics_10']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour10" name="hour10" class="form-control"  type="number"value="<?php echo $rowpro['hour10']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor10" name="Instructor10" class="form-control"   value="<?php echo $rowpro['Instructor10']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week11" name="Week11" class="form-control" type="number" value="<?php echo $rowpro['Week11']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics11" name="Topics11" class="form-control" ><?php echo $rowpro['Topics_11']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour11" name="hour11" class="form-control"  type="number"value="<?php echo $rowpro['hour11']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor11" name="Instructor11" class="form-control"   value="<?php echo $rowpro['Instructor11']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week12" name="Week12" class="form-control" type="number" value="<?php echo $rowpro['Week12']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics12" name="Topics12" class="form-control" ><?php echo $rowpro['Topics_12']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour13" name="hour13" class="form-control"  type="number"value="<?php echo $rowpro['hour12']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor13" name="Instructor13" class="form-control"   value="<?php echo $rowpro['Instructor12']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week14" name="Week14" class="form-control" type="number" value="<?php echo $rowpro['Week14']; ?>">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics14" name="Topics14" class="form-control" ><?php echo $rowpro['Topics_14']; ?>   </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour14" name="hour14" class="form-control"  type="number"value="<?php echo $rowpro['hour14']; ?>"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor14" name="Instructor14" class="form-control"   value="<?php echo $rowpro['Instructor14']; ?>"> 
+				 </td>
+				 </tr>
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week15" name="Week15" class="form-control" type="number" ">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics15" name="Topics15" class="form-control" >  </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour15" name="hour15" class="form-control"  type="number"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor15" name="Instructor15" class="form-control"  > 
+				 </td>
+				 </tr>
+ 
+ </table>
 </div> <br> <hr>
 
 	
