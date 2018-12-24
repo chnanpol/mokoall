@@ -17,7 +17,10 @@
     <script src="./js/bootstrap.min.js"></script>
 </head>
 
-<body class="bg-secondary">
+
+<body class=" navbar-light" style="background-color: #e3f2fd";>
+  
+   
     <header class="navbar navbar-expand navbar-dark bg-dark">
         <!DOCTYPE html>
         <!-- MENU BAR -->

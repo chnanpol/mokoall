@@ -158,7 +158,18 @@
 
 
 
-
+ $faculty = $_POST["faculty"];
+ $major = $_POST["Major"];
+ $id = $_POST["id"];
+ $course = $_POST["course"];
+ $teacher = $_POST["Teacher"];
+ $semester = $_POST["semester"];
+ $semesterf = $_POST["semesterf"];
+ $pre = $_POST["pre"];    
+ $thgroup = $_POST["group_tc"]; 
+ $co = $_POST["co"];
+ $place = $_POST["place"];
+ $document = $_POST["document"];
 
   	
  $sql1 = "INSERT INTO group4_mk5 
@@ -167,7 +178,7 @@
  Topics_1,Topics_2,Topics_3,Topics_4,Topics_5,Topics_6,Topics_7,Topics_8,Topics_9,Topics_10,Topics_11,Topics_12,Topics_13,Topics_14,Topics_15,
  hour1,hour2,hour3,hour4,hour5,hour6,hour7,hour8,hour9,hour10,hour11,hour12,hour13,hour14,hour15,
  Instructor1,Instructor2,Instructor3,Instructor4,Instructor5,Instructor6,Instructor7,
- Instructor8,Instructor9,Instructor10,Instructor11,Instructor12,Instructor13,Instructor14,Instructor15
+ Instructor8,Instructor9,Instructor10,Instructor11,Instructor12,Instructor13,Instructor14,Instructor15,number_group
  )
  VALUES
  ('$pro_id',
@@ -187,31 +198,31 @@
  ,'$Instructor1','$Instructor2','$Instructor3','$Instructor4'
  ,'$Instructor5','$Instructor6','$Instructor7'
  ,'$Instructor8','$Instructor9','$Instructor10'
- ,'$Instructor11','$Instructor12','$Instructor13','$Instructor14','$Instructor15')";
+ ,'$Instructor11','$Instructor12','$Instructor13','$Instructor14','$Instructor15','$thgroup')";
  
 	$result1 = mysqli_query($con, $sql1);
 
 $sql2 = "INSERT INTO group5_mka5 (j_number,Topics_covered,Significance,Compensation,Improveteaching,students_enrolled,assessment
-,students_remaining,students_withdrawn,Factors_to_Rating,Time_deviation,Discrepancies,Verificatio_method)
+,students_remaining,students_withdrawn,Factors_to_Rating,Time_deviation,Discrepancies,Verificatio_method,number_group)
 VALUES('$pro_id','$Topics_covered','$Significance','$Compensation','$Improveteaching','$students_enrolled','$assessment','$students_remaining'
-,'$students_withdrawn','$Factors_to_Rating','$Time_deviation','$Discrepancies','$Verification_method')";
+,'$students_withdrawn','$Factors_to_Rating','$Time_deviation','$Discrepancies','$Verification_method','$thgroup')";
 
 $result2 = mysqli_query($con, $sql2);
 
 
 
 $sql3 = "INSERT INTO group6_mka5 (j_number,conclude,problem_of_using,effect,Administrative,Impact,Student_Evaluation,Critical
-,comments,Critical_1,comments_1,Improvement,Results,Other_actions,offer,Time_limit,responsible_person,Suggestions)
+,comments,Critical_1,comments_1,Improvement,Results,Other_actions,offer,Time_limit,responsible_person,Suggestions,number_group)
 VALUES('$pro_id','$conclude','$problem_of_using','$effect','$Administrative','$Impact','$Student_Evaluation','$Critical','$comments'
-,'$Critical_1','$comments_1','$Improvement','$Results','$Other_actions','$offer','$Time_limit','$responsible_person','$Suggestions')";
+,'$Critical_1','$comments_1','$Improvement','$Results','$Other_actions','$offer','$Time_limit','$responsible_person','$Suggestions','$thgroup')";
 
 $result3 = mysqli_query($con, $sql3);
 
-$sql4 = "INSERT INTO group7_mka5 (j_number,issue1,issue2,issue3,issue4,issue5,group1,group2,group3,group4,group5)
+$sql4 = "INSERT INTO group7_mka5 (j_number,issue1,issue2,issue3,issue4,issue5,group1,group2,group3,group4,group5,number_group)
 VALUES
 
 ('$pro_id','$issue1','$issue2','$issue3','$issue4','$issue5','$group1','$group2','$group3'
-,'$group4','$group5')";
+,'$group4','$group5','$thgroup')";
 
 $result4 = mysqli_query($con, $sql4);
 
@@ -220,7 +231,7 @@ $result4 = mysqli_query($con, $sql4);
 
 
 $sql5 = "INSERT INTO group8_mka5 
-(j_number,A,BP,B,CP,C,DP,D,F,W,X,A1,BP1,B1,CP1,C1,DP1,D1,F1,W1,X1,A2,BP2,B2,CP2,C2,DP2,D2,F2,W2,X2)
+(j_number,A,BP,B,CP,C,DP,D,F,W,X,A1,BP1,B1,CP1,C1,DP1,D1,F1,W1,X1,A2,BP2,B2,CP2,C2,DP2,D2,F2,W2,X2,number_group)
 VALUES
 ('$pro_id',
 '$a','$bp','$b','$cp','$c','$dp','$d','$f',
@@ -228,17 +239,22 @@ VALUES
 '$a1','$bp1','$b1','$cp1','$c1','$dp1','$d1','$f1',
 '$w1','$x1',
 '$a2','$bp2','$b2','$cp2','$c2','$dp2','$d2','$f2',
-'$w2','$x2')";
+'$w2','$x2','$thgroup')";
 
    $result5 = mysqli_query($con, $sql5);
 
 
+   $sql6 = "INSERT INTO tbl_addjob_mka5
+   (j_number, stu_fac, stu_major,j_id, j_course, j_teacher, j_semester, j_pre, co, place, j_document,j_semester_f,number_group,j_datetime)
+		   VALUES('$pro_id','$faculty','$major','$id','$course','$teacher','$semester','$pre','$co','$place','$document','$semesterf','$thgroup',NOW())";
+	  $result6 = mysqli_query($con, $sql6);
 
-	
-if($result5){
+	 
+
+if($result1){
 	echo "<script type='text/javascript'>";
 		echo "alert('Save Succesfuly');";
-		echo "window.location = 'mainpage.php'; ";
+		echo "window.location ='page_moallko5.php'; ";
 		echo "</script>";
 
 	}
@@ -248,13 +264,80 @@ if($result5){
 			}
 			else 
 			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result2){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	}
+
+
 		
+			
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result3){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	
+
+
+		
+			}
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result4){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	
+
+
+		
+			}
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
 				exit();
 			}
 
 
+			if($result5){
+				echo "<script type='text/javascript'>";
+					echo "alert('Save Succesfuly');";
+					echo "window.location ='page_moallko5.php'; ";
+					echo "</script>";
+			
+				
+			
+			
+					
+						}
+						else 
+						{
+							echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+							exit();
+						}
+     
+					
 mysqli_close($con);
    
-
-  
 ?>

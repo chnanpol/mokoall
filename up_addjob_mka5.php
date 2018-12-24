@@ -1,6 +1,8 @@
 <?php
  require 'connect.php';
 
+   $number_group  = $_GET ['number_group'];
+   
    $j_number   = $_GET ['j_number'];
    $qpro = "SELECT * FROM tbl_addjob A
    INNER JOIN group2 B ON A.j_number = B.j_number
@@ -9,8 +11,10 @@
    INNER JOIN group6_mka5 E ON A.j_number = E.j_number
    INNER JOIN group7_mka5 F ON A.j_number = F.j_number
    INNER JOIN group8_mka5 G ON A.j_number = G.j_number
+   INNER JOIN tbl_addjob_mka5 H ON A.j_number = H.j_number
   
-   WHERE A.j_number = '$j_number'";
+  
+   WHERE A.j_number = '$j_number'AND H.number_group='$number_group'";
    $respro = mysqli_query($con, $qpro);
    $rowpro = mysqli_fetch_array($respro, MYSQLI_ASSOC);
    
@@ -75,7 +79,7 @@ th {
 	<form method="POST" id="upform" action="up_addjob_mka5_bn.php" >
 
 	<br>
-		<h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2>
+	<center>	<h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2> </center>
 			<div class="row">
               
 				<div class="col-6">
@@ -137,7 +141,7 @@ th {
 			</div> 
 			<br>
 				
-				<h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2> <br>
+			<center>	<h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2> </center> <br>
 		
 <center>	
 
@@ -670,7 +674,7 @@ th {
      <div class="col-12">
 
      <label class="form-text"> </label>
-                   <textarea id="b_w" name="b_w" class="form-control"> <?php echo $rowpro['b_w']; ?>"> </textarea> 
+                   <textarea id="b_w" name="b_w" class="form-control"> <?php echo $rowpro['b_w']; ?> </textarea> 
                 </div>
 				
                 <div class="col-12">
@@ -908,7 +912,7 @@ th {
 <hr>
 <br>
 
-  <h2>  หมวดที่ 3  สรุปผลการจัดการเรียนการสอนของรายวิชา </h2>
+  <h2>   <center> หมวดที่ 3  สรุปผลการจัดการเรียนการสอนของรายวิชา </h2>  </center>
 
 
  <div class="col-12">
@@ -934,12 +938,64 @@ th {
 <h2>4. การกระจายของระดับคะแนน (เกรด)</h2>
  <table border="2px"> 
     <tr>
+	<th>  <center>    เกรด</th>  </center>
     <th>  <center>    ระดับคะแนน</th>  </center>
  <th>   <center>   จำนวน </th> </center>
  <th>   <center> คิดเป็นร้อยละ </th> </center>
 	</tr>
 	
 	<tr>
+	<td>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control" value="A"  readonly> 
+				</div>
+			
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="B+" readonly> 
+                
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="B"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="C+"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="C"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="D+"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="D"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="F"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="X"readonly> 
+
+				</div>	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="W"readonly> 
+          </div>
+		</td>	
 		<td>
 			<div class="form-group">
                 <label class="form-text"></label>
@@ -1131,7 +1187,7 @@ th {
     </div>
     <br>
       
-      <h2> หมวดที่ 4  ปัญหาและผลกระทบต่อการดำเนินการ </h2>
+	<center><h2> หมวดที่ 4  ปัญหาและผลกระทบต่อการดำเนินการ </h2> </center>
       <br>
       <h3> ทรัพยากรประกอบการเรียนและสิ่งอำนวยความสะดวก </h3>
       
@@ -1167,7 +1223,7 @@ th {
               </div>
               <br>
 
-              <h2> หมวดที่ 5  การประเมินรายวิชา </h2> <br>
+              <h2> <center> หมวดที่ 5  การประเมินรายวิชา </h2> <br> </center>
 
 
 <div class="col-12">
@@ -1243,6 +1299,7 @@ th {
 
          <br><br>
          <input type="hidden" name="pro_id" value="<?php echo $rowpro['j_number']; ?>">
+		 <input type="hidden" name="number_group" value="<?php echo $rowpro['number_group']; ?>">
          <input name="submit" type="submit" id="submit"  class="btn btn-success" >
        </fieldset>
      </form>

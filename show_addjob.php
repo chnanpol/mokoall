@@ -181,7 +181,7 @@
 			 <td>
 	 <div   class="form-group">
 					 <label class="form-text"></label>
-					<input id="Teacher" name="Teacher" class="form-control"value="<?php echo $rowpro['j_teacher']; ?>"readonly>
+					<textarea id="Teacher" name="Teacher" class="form-control"readonly><?php echo $rowpro['j_teacher']; ?></textarea>
 				 </div>
  
 				 </td>
@@ -378,7 +378,7 @@
 			 <div class="form-group">
 				 
 				 <label class="form-text">  </label>
-					<textarea id="b_w" name="b_w" class="form-control"readonly> <?php echo $rowpro['b_w']; ?>"> </textarea> 
+					<textarea id="b_w" name="b_w" class="form-control"readonly> <?php echo $rowpro['b_w']; ?>  </textarea> 
 				 </div>
 				 </td>
 				 </tr>
@@ -764,7 +764,8 @@
   <div style="page-break-after: always"></div>
 		  <br><br>
 		  <input type="hidden" name="pro_id" value="<?php echo $rowpro['j_number']; ?>">
-		  <table border="2px"> 
+	  <CENTER> <h2> แผนการสอน</h2>  </CENTER>
+		<table border="2px"> 
 	 <tr>
   <th>  <center>    สัปดาห์ </th>  </center>
   <th>   <center>   หัวข้อ </th> </center>
@@ -776,7 +777,7 @@
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week1" name="Week1" class="form-control" type="number" value="<?php echo $rowpro['Week1']; ?>"readonly>
+				 <input id="Week1" name="Week1" class="form-control" type="number" value="<?php echo $rowpro['Week1']; ?>"readonly>	
 			 </div>
 			 </td>
  

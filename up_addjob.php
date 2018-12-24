@@ -25,14 +25,34 @@
 
 </div>
  </nav>
-     <style>
-            label {
-              display: block;
-            }
-     </style>
+ <style>
+			 label {
+			   display: block;
+			 }
+	 
+	  </style>
+   <style>
+			  
+ table, td, th {
+	 border: 2px solid black;
+ }
+ 
+ table {
+	 border-collapse: collapse;
+	 width: 100%;
+	 height: 70px;
+	 
+ }
+ 
+ th {
+	 height: 70px;
+ }
+ 
+ 
+ </style>
    </head>
    
-<body class=" navbar-light" style="background-color: #e3f2fd;>
+<body class=" navbar-light" style="background-color: #e3f2fd;">
    <body class="bg-secondary">
    
     <header class="navbar navbar-expand navbar-dark bg-dark">
@@ -84,7 +104,7 @@
 			
 				<div class="col-4">
                     <label class="form-text">อาจารย์ผู้รับผิดชอบรายวิชาและอาจารย์ผู้สอน</label>
-                   <input id="Teacher" name="Teacher" class="form-control"value="<?php echo $rowpro['j_teacher']; ?>">
+                   <textarea id="Teacher" name="Teacher" class="form-control"><?php echo $rowpro['j_teacher']; ?> </textarea>
                 </div>
 				<div class="col-4">
                     <label class="form-text">ภาคการศึกษา</label>
@@ -92,7 +112,7 @@
                 </div>
 				<div class="col-4">
                     <label class="form-text">ปีการศึกษา</label>
-                   <input id="semester" name="semesterf" class="form-control"value="<?php echo $rowpro['j_semester_f']; ?>">
+                   <input id="semesterf" name="semesterf" class="form-control"value="<?php echo $rowpro['j_semester_f']; ?>">
                 </div>
 			
 			</div>
@@ -200,7 +220,7 @@
 			<div class="col-12">
 				
 				<label class="form-text"> แผนที่แสดงการกระจายความรับผิดชอบต่อผลการเรียนรู้จากหลักสูตรสู่รายวิชา </label>
-                   <textarea id="b_w" name="b_w" class="form-control"> <?php echo $rowpro['b_w']; ?>"> </textarea> 
+                   <textarea id="b_w" name="b_w" class="form-control"> <?php echo $rowpro['b_w']; ?> </textarea> 
                 </div>
 				<div class="col-12">
 
@@ -287,89 +307,153 @@
                    <input id="Evaluationmethod5" name="Evaluationmethod5" class="form-control"value="<?php echo $rowpro['Evaluationmethod_5']; ?>">
                 </div>
 			</div>
-			<hr> <br>
-			<h2> วิธีการสอน (Teaching Approach) และการจัดการเรียนการสอนที่เน้นผู้เรียนเป็นสำคัญ  </h2>
-			<br>
-				<center> <h4>     (Student – Centered Approach) </h4>    </center>
-				
-				<input type="checkbox" name='l[]' value= "การบรรยาย (Lecture)"   
-			<?php if(in_array("การบรรยาย (Lecture)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การบรรยาย (Lecture) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-				
-				<input type="checkbox" name='l[]' value= "การฝึกปฏิบัติ (Practice)"   
-			<?php if(in_array("การฝึกปฏิบัติ (Practice)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การฝึกปฏิบัติ (Practice)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			
+			<table>
+	 <tr>
+			 <hr> <br>
+			 <h2> วิธีการสอน (Teaching Approach) และการจัดการเรียนการสอนที่เน้นผู้เรียนเป็นสำคัญ  </h2>
+			 <br>
+				 <center> <h4>     (Student – Centered Approach) </h4>    </center>
+				 
+			 <td>	
+			 <input type="checkbox" name='l[]' value= "การบรรยาย (Lecture)"   
+			 <?php if(in_array("การบรรยาย (Lecture)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การบรรยาย (Lecture) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 			 
-				<input type="checkbox" name='l[]' value= "การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)"   
-			<?php if(in_array("การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />
-			การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			 <input type="checkbox" name='l[]' value= "การฝึกปฏิบัติ (Practice)"   
+			 <?php if(in_array("การฝึกปฏิบัติ (Practice)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การฝึกปฏิบัติ (Practice)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		 
+			 <input type="checkbox" name='l[]' value= "การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)"   
+			 <?php if(in_array("การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />
+			 การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		 </td>
+		 </tr>
+		 
+		 
+		 
+		 <td>
+			 
+					
 				 
+	   <input type="checkbox" name='l[]' value= "การอภิปราย (Discussion)"   
+			 <?php if(in_array("การอภิปราย (Discussion)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การอภิปราย (Discussion) &nbsp; &nbsp; &nbsp; &nbsp; 
+				 <input type="checkbox" name='l[]' value= "การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning)"   
+			 <?php if(in_array("การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning) &nbsp; &nbsp; &nbsp; &nbsp; 
+				 <input type="checkbox" name='l[]' value= "การเรียนการสอนแบบ (Hybrid Learning System)"   
+			 <?php if(in_array("การเรียนการสอนแบบ (Hybrid Learning System)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนการสอนแบบ (Hybrid Learning System)&nbsp; &nbsp; &nbsp; &nbsp; 
+			 
+			 </td>
+			 </tr> 
 				 
-				   <br>
-				
-      <input type="checkbox" name='l[]' value= "การอภิปราย (Discussion)"   
-			<?php if(in_array("การอภิปราย (Discussion)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การอภิปราย (Discussion) &nbsp; &nbsp; &nbsp; &nbsp; 
-				<input type="checkbox" name='l[]' value= "การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning)"   
-			<?php if(in_array("การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning) &nbsp; &nbsp; &nbsp; &nbsp; 
-				<input type="checkbox" name='l[]' value= "การเรียนการสอนแบบ (Hybrid Learning System)"   
-			<?php if(in_array("การเรียนการสอนแบบ (Hybrid Learning System)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนการสอนแบบ (Hybrid Learning System)&nbsp; &nbsp; &nbsp; &nbsp; 
-			
-			
+			 
+ <tr>
+			 <td>	<input type="checkbox" name='l[]' value= "การสัมมนา (Seminar)"   
+			 <?php if(in_array("การสัมมนา (Seminar)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การสัมมนา (Seminar) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+				 <input type="checkbox" name='l[]' value= "การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning)"   
+			 <?php if(in_array("การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning) &nbsp;&nbsp; 
+				 <input type="checkbox" name='l[]' value= "การเรียนรู้เป็นรายบุคคล  (Individual Study)"   
+			 <?php if(in_array("การเรียนรู้เป็นรายบุคคล  (Individual Study)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้เป็นรายบุคคล  (Individual Study) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			 </td>
+			 </tr>
+			 <td>
+				 <input type="checkbox" name='l[]' value= "การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study)"   
+			 <?php if(in_array("การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study) &nbsp;
+				 <input type="checkbox" name='l[]' value= "การเรียนรู้จากการทำงาน (Work-based Learning)"   
+			 <?php if(in_array("การเรียนรู้จากการทำงาน (Work-based Learning))", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้จากการทำงาน (Work-based Learning) &nbsp;
+				 <input type="checkbox" name='l[]' value= "กรณีศึกษา (Case Study)..."   
+			 <?php if(in_array("กรณีศึกษา (Case Study)...", $checkbox_array)){ echo " checked=\"checked\""; } ?> />กรณีศึกษา (Case Study)... &nbsp;
+			 </td>
+			 </table>
+			  <br> <hr>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+		 
+			 <table>
+			 <center> <h4>     สื่อการสอน (Teaching Aids/Instructional Media) </h4> </center>
+		 
+			 <tr>
+			 <td>
+				 <input type="checkbox" name='s[]' value= "รูปภาพ (Pictures)"   
+			 <?php if(in_array("รูปภาพ (Pictures)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />รูปภาพ (Pictures) &nbsp;
+				 <input type="checkbox" name='s[]' value= "สื่อนำเสนอในรูปแบบ  PowerPoint"   
+			 <?php if(in_array("สื่อนำเสนอในรูปแบบ  PowerPoint", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สื่อนำเสนอในรูปแบบ  PowerPoint &nbsp;
+			 <input type="checkbox" name='s[]' value= "ของจริง (Authentic Material)"   
+			 <?php if(in_array("ของจริง (Authentic Material)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />ของจริง (Authentic Material) &nbsp; <br>
+				 </td>
+				 </tr>
+ 
+				 <tr>
+				 <td>
+
+				 <input type="checkbox" name='s[]' value= "สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ "   
+			 <?php if(in_array("สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ ", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ  &nbsp;
+			 </td>
+			 </tr>
+		 
+			 </table>
 <br>
-				<input type="checkbox" name='l[]' value= "การสัมมนา (Seminar)"   
-			<?php if(in_array("การสัมมนา (Seminar)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การสัมมนา (Seminar) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-				<input type="checkbox" name='l[]' value= "การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning)"   
-			<?php if(in_array("การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning) &nbsp;&nbsp; 
-				<input type="checkbox" name='l[]' value= "การเรียนรู้เป็นรายบุคคล  (Individual Study)"   
-			<?php if(in_array("การเรียนรู้เป็นรายบุคคล  (Individual Study)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้เป็นรายบุคคล  (Individual Study) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+			 <table>
+
+			 <center> <h4>     กิจกรรมสำหรับนักศึกษา (Student Activities)</h4> </center>
 			
-			
-				<input type="checkbox" name='l[]' value= "การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study)"   
-			<?php if(in_array("การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study)", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study) &nbsp;
-				<input type="checkbox" name='l[]' value= "การเรียนรู้จากการทำงาน (Work-based Learning)"   
-			<?php if(in_array("การเรียนรู้จากการทำงาน (Work-based Learning))", $checkbox_array)){ echo " checked=\"checked\""; } ?> />การเรียนรู้จากการทำงาน (Work-based Learning) &nbsp;
-				<input type="checkbox" name='l[]' value= "กรณีศึกษา (Case Study)..."   
-			<?php if(in_array("กรณีศึกษา (Case Study)...", $checkbox_array)){ echo " checked=\"checked\""; } ?> />กรณีศึกษา (Case Study)... &nbsp;
-			
-			 <br> <hr>
-			<center> <h4>     สื่อการสอน (Teaching Aids/Instructional Media) </h4> </center>
-			<br>
-			
-				<input type="checkbox" name='s[]' value= "รูปภาพ (Pictures)"   
-			<?php if(in_array("รูปภาพ (Pictures)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />รูปภาพ (Pictures) &nbsp;
-				<input type="checkbox" name='s[]' value= "สื่อนำเสนอในรูปแบบ  PowerPoint"   
-			<?php if(in_array("สื่อนำเสนอในรูปแบบ  PowerPoint", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สื่อนำเสนอในรูปแบบ  PowerPoint &nbsp;
-				<input type="checkbox" name='s[]' value= "ของจริง (Authentic Material)"   
-			<?php if(in_array("ของจริง (Authentic Material)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />ของจริง (Authentic Material) &nbsp; <br>
-				<input type="checkbox" name='s[]' value= "สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ "   
-			<?php if(in_array("สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ ", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ  &nbsp;
-			
-			<br> <hr>
-			<center> <h4>     กิจกรรมสำหรับนักศึกษา (Student Activities)</h4> </center>
-			<br>
-				<div>
-				<input type="checkbox" name='s[]' value= "การค้นคว้าข้อมูล(Data/Information Search)"   
-			<?php if(in_array("การค้นคว้าข้อมูล(Data/Information Search)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การค้นคว้าข้อมูล(Data/Information Search) &nbsp;
-				<input type="checkbox" name='s[]' value= "เกมส์ (Games)"   
-			<?php if(in_array("เกมส์ (Games)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />เกมส์ (Games) &nbsp;
-				<input type="checkbox" name='s[]' value= "การระดมสมอง (Brainstorming)"   
-			<?php if(in_array("การระดมสมอง (Brainstorming)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การระดมสมอง (Brainstorming) &nbsp;
-				<input type="checkbox" name='s[]' value= "สถานการณ์จำลอง (Simulation)"   
-			<?php if(in_array("สถานการณ์จำลอง (Simulation)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สถานการณ์จำลอง (Simulation) &nbsp;
-				<input type="checkbox" name='s[]' value= "การนำเสนอ (Presentation)"   
-			<?php if(in_array("การนำเสนอ (Presentation))", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การนำเสนอ (Presentation) &nbsp;
-				<input type="checkbox" name='s[]' value= "การสำรวจข้อมูล (Survey)"   
-			<?php if(in_array("การสำรวจข้อมูล (Survey)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การสำรวจข้อมูล (Survey) &nbsp;
-				<input type="checkbox" name='s[]' value= "การแสดงบทบาทสมมติ (Role Play)"   
-			<?php if(in_array("การแสดงบทบาทสมมติ (Role Play)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การแสดงบทบาทสมมติ (Role Play) &nbsp;
-				<input type="checkbox" name='s[]' value= "การทดลอง (Experiment)"   
-			<?php if(in_array("การทดลอง (Experiment)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การทดลอง (Experiment) &nbsp;
-				<input type="checkbox" name='s[]' value= "การศึกษาดูงาน (Field Trip)"   
-			<?php if(in_array("การศึกษาดูงาน (Field Trip)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การศึกษาดูงาน (Field Trip) &nbsp;
-				<input type="checkbox" name='s[]' value= "การเชิญผู้มีประสบการณ์มาสอนเสริม"   
-			<?php if(in_array("การเชิญผู้มีประสบการณ์มาสอนเสริม", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การเชิญผู้มีประสบการณ์มาสอนเสริม &nbsp;
-				<input type="checkbox" name='s[]' value= "กการส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ"   
-			<?php if(in_array("การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ &nbsp;
-				
-				</div>
+			 <tr>
+			 <td>
+				 <div>
+				 <input type="checkbox" name='s[]' value= "การค้นคว้าข้อมูล(Data/Information Search)"   
+			 <?php if(in_array("การค้นคว้าข้อมูล(Data/Information Search)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การค้นคว้าข้อมูล(Data/Information Search) &nbsp;
+				 
+				 <input type="checkbox" name='s[]' value= "เกมส์ (Games)"   
+			 <?php if(in_array("เกมส์ (Games)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />เกมส์ (Games) &nbsp;
+				 
+				 
+				 <input type="checkbox" name='s[]' value= "การระดมสมอง (Brainstorming)"   
+			 <?php if(in_array("การระดมสมอง (Brainstorming)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การระดมสมอง (Brainstorming) &nbsp;
+				 
+				 <input type="checkbox" name='s[]' value= "สถานการณ์จำลอง (Simulation)"   
+			 <?php if(in_array("สถานการณ์จำลอง (Simulation)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />สถานการณ์จำลอง (Simulation) &nbsp;
+				 
+				 </td>
+
+				 </tr>
+				 <tr>
+				 <td>
+				 <input type="checkbox" name='s[]' value= "การนำเสนอ (Presentation)"   
+			 <?php if(in_array("การนำเสนอ (Presentation))", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การนำเสนอ (Presentation) &nbsp;
+			 
+				 <input type="checkbox" name='s[]' value= "การสำรวจข้อมูล (Survey)"   
+			 <?php if(in_array("การสำรวจข้อมูล (Survey)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การสำรวจข้อมูล (Survey) &nbsp;
+			 
+				 <input type="checkbox" name='s[]' value= "การแสดงบทบาทสมมติ (Role Play)"   
+			 <?php if(in_array("การแสดงบทบาทสมมติ (Role Play)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การแสดงบทบาทสมมติ (Role Play) &nbsp;
+			 
+				 <input type="checkbox" name='s[]' value= "การทดลอง (Experiment)"   
+			 <?php if(in_array("การทดลอง (Experiment)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การทดลอง (Experiment) &nbsp;
+			 </td>
+			 </tr>
+			 <tr>
+			 <td>
+				 <input type="checkbox" name='s[]' value= "การศึกษาดูงาน (Field Trip)"   
+			 <?php if(in_array("การศึกษาดูงาน (Field Trip)", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การศึกษาดูงาน (Field Trip) &nbsp;
+				 
+				 <input type="checkbox" name='s[]' value= "การเชิญผู้มีประสบการณ์มาสอนเสริม"   
+			 <?php if(in_array("การเชิญผู้มีประสบการณ์มาสอนเสริม", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การเชิญผู้มีประสบการณ์มาสอนเสริม &nbsp;
+				 
+				 <input type="checkbox" name='s[]' value= "กการส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ"   
+			 <?php if(in_array("การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ", $checkbox_array1)){ echo " checked=\"checked\""; } ?> />การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ &nbsp;
+				 
+				 </div>
+ </td>
+ </tr>
+  </table>
+  <br>
+  <br>
+  <CENTER><h2> แผนการสอน</h2>  </CENTER>
 				<table border="2px"> 
 	 <tr>
   <th>  <center>    สัปดาห์ </th>  </center>

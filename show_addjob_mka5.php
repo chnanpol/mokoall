@@ -1,16 +1,20 @@
 <?php
  require 'connect.php';
 
-   $j_number   = $_GET ['j_number'];
-   $qpro = "SELECT * FROM tbl_addjob A
-   INNER JOIN group2 B ON A.j_number = B.j_number
-   INNER JOIN group4_mk5 C ON A.j_number = C.j_number
-   INNER JOIN group5_mka5 D ON A.j_number = D.j_number
-   INNER JOIN group6_mka5 E ON A.j_number = E.j_number
-   INNER JOIN group7_mka5 F ON A.j_number = F.j_number
-   INNER JOIN group8_mka5 G ON A.j_number = G.j_number
-  
-   WHERE A.j_number = '$j_number'";
+ $number_group  = $_GET ['number_group'];
+   
+ $j_number   = $_GET ['j_number'];
+ $qpro = "SELECT * FROM tbl_addjob A
+ INNER JOIN group2 B ON A.j_number = B.j_number
+ INNER JOIN group4_mk5 C ON A.j_number = C.j_number
+ INNER JOIN group5_mka5 D ON A.j_number = D.j_number
+ INNER JOIN group6_mka5 E ON A.j_number = E.j_number
+ INNER JOIN group7_mka5 F ON A.j_number = F.j_number
+ INNER JOIN group8_mka5 G ON A.j_number = G.j_number
+ INNER JOIN tbl_addjob_mka5 H ON A.j_number = H.j_number
+
+
+ WHERE A.j_number = '$j_number'AND H.number_group='$number_group'";
    $respro = mysqli_query($con, $qpro);
    $rowpro = mysqli_fetch_array($respro, MYSQLI_ASSOC);
    
@@ -39,6 +43,11 @@
 <style>
 table, td, th {
     border: 1px solid black;
+	
+
+		
+width:500px
+
 }
 
 table {
@@ -55,7 +64,7 @@ th {
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <title>แก้เอกสาร</title>
+     <title>ดูเอกสาร</title>
   
    
 
@@ -95,11 +104,13 @@ th {
 	<form method="POST" id="upform" action="addjob_moloall5_bn.php" >
 
 	<br>
-	<table border="2px"> 
- <h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2>
+	<table border="2px">
+
+ <center><h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2> </center>
 	
 	 <tr>
 			 <th>  <center>    คณะ </th>  </center>
+			 <th>  <center>    กลุ่มที่ </th>  </center>
  
 	 </tr>
 	 <tr>
@@ -109,7 +120,13 @@ th {
 					 <label class="form-text"></label>
 					<input id="faculty" name="faculty" class="form-control"value="<?php echo $rowpro['stu_fac']; ?>"readonly>
 				 </div>
-		 </td>					
+		 </td>			
+
+		 <td>		
+		 <div class="form-group">
+                    <label class="form-text"></label>
+                   <input id="group_tc" name="group_tc" class="form-control"value="<?php echo $rowpro['number_group']; ?>"readonly>
+                </div>
  
   </tr>
 		 </table>	
@@ -177,7 +194,7 @@ th {
 			 <td>
 	 <div   class="form-group">
 					 <label class="form-text"></label>
-					<input id="Teacher" name="Teacher" class="form-control"value="<?php echo $rowpro['j_teacher']; ?>"readonly>
+					<textarea id="Teacher" name="Teacher" class="form-control"readonly><?php echo $rowpro['j_teacher']; ?></textarea>
 				 </div>
  
 				 </td>
@@ -240,7 +257,7 @@ th {
 			 <tr>
 			 <td>
 	   <div   class="form-group">
-					 <label class="form-text">วันที่จัดทำหรือปรับปรุงรายละเอียดวิชาครั้งล่าสุด</label>
+					 <label class="form-text"></label>
 					<input id="document" name="document" class="form-control"value="<?php echo $rowpro['j_datetime']; ?>"readonly>
 				 </div>
  
@@ -249,8 +266,8 @@ th {
 			 </table>
             
 				 <div style="page-break-after: always"></div>
-				
-				 <center> <h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2>  </center>
+				<br>
+<br>				 <center> <h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2>  </center>
 		
 <center>	
 
@@ -347,7 +364,7 @@ th {
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor3" name="Instructor3" class="form-control"   value="<?php echo $rowpro['Instructor3']; ?>"readonly> 
+				 <input id="Instructor3" name="Instructor3" class="form-control"  readonly> 
 				 </td>
 				 </tr>
  
@@ -562,8 +579,12 @@ th {
 				 <input id="Instructor10" name="Instructor10" class="form-control"   value="<?php echo $rowpro['Instructor10']; ?>"readonly> 
 				 </td>
 				 </tr>
- 
- 	 
+ </table>
+
+				 <div style="page-break-after: always"></div>
+				 <br>
+				<table>
+				
 				 <tr>
 				 
 		 <td>
@@ -719,7 +740,7 @@ th {
  
 	 </table>
 
-    
+	
     <br>    <br>    <br>   
     <h2> 2. หัวข้อที่สอนไม่ครอบคลุมตามแผน </H2>
  
@@ -756,8 +777,8 @@ th {
 		</td>				
 	</tr> 
 	
-	</table>		
-</center>
+	</table>	
+	<div style="page-break-after: always"></div>
 		
             <br>    <br>    <br>   
             <h2> 3. ประสิทธิผลของวิธีสอนที่ทำให้เกิดผลการเรียนรู้ตามที่ระบุในรายละเอียดของรายวิชา </H2>
@@ -783,7 +804,7 @@ th {
      <div class="col-12">
 
      <label class="form-text"> </label>
-                   <textarea id="b_w" name="b_w" class="form-control"readonly> <?php echo $rowpro['b_w']; ?>"> </textarea> 
+                   <textarea id="b_w" name="b_w" class="form-control"readonly> <?php echo $rowpro['b_w']; ?> </textarea> 
                 </div>
 				
                 <div class="col-12">
@@ -793,20 +814,19 @@ th {
                 </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการประเมินผล</label>
-                   <input id="Evaluationmethod1" name="Evaluationmethod1" class="form-control"value="<?php echo $rowpro['Evaluationmethod_1']; ?>"readonly>
+					<textarea id="Evaluationmethod1" name="Evaluationmethod1" class="form-control" readonly><?php echo $rowpro['Evaluationmethod_1']; ?>	</textarea>
                 </div>
                 <br>
      </td>		
      <td>
-     <center>
-     <select name="group1">
-    <option value="มี">มี</option>
-    <option value="ไม่มี">ไม่มี</option>
-  </select>
-     
-  </center>
+	 <center>
+	 <div class="col-4">
+                    <label class="form-text"></label>
+                   <input id="group1" name="group1" class="form-control"value="<?php echo $rowpro['group1']; ?>"readonly>
+                </div>
+
      </td>				
- 
+	 </center>
      <td>
     
      <div class="col-12">
@@ -834,15 +854,20 @@ th {
 			<div class="row">
 				<div class="col-12">
 				<label class="form-text">ความรู้ที่ต้องได้รับ </label>
-                   <input id="Knowledge1" name="Knowledge1" class="form-control"value="<?php echo $rowpro['knowledge_1']; ?>"readonly>
+				<textarea id="Knowledge1" name="Knowledge1" class="form-control" readonly><?php echo $rowpro['knowledge_1']; ?>	</textarea>
+   
                 </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการสอน </label>
-                   <input id="Teachingmethods2" name="Teachingmethods2" class="form-control"value="<?php echo $rowpro['teachingmethods_2']; ?>"readonly>
+					<textarea id="Teachingmethods2" name="Teachingmethods2" class="form-control" readonly><?php echo $rowpro['teachingmethods_2']; ?>	</textarea>
+   
+				
                 </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการประเมินผล</label>
-                   <input id="Evaluationmethod2" name="Evaluationmethod2" class="form-control"value="<?php echo $rowpro['Evaluationmethod_2']; ?>"readonly>
+					<textarea id="Evaluationmethod2" name="Evaluationmethod2" class="form-control" readonly><?php echo $rowpro['Evaluationmethod_2']; ?>	</textarea>
+   
+				  
                 </div>
 			</div>
             <br>
@@ -850,10 +875,10 @@ th {
    
      <td>
 <center>
-    <select name="group2">
-    <option value="มี">มี</option>
-    <option value="ไม่มี">ไม่มี</option>
-  </select>
+<div class="col-4">
+                    <label class="form-text"></label>
+                   <input id="group1" name="group1" class="form-control"value="<?php echo $rowpro['group2']; ?>"readonly>
+                </div>
   </center>
      
      </td>				
@@ -865,7 +890,10 @@ th {
            </div>
 </td>		
  </tr> 
-
+ </table>
+<div style="page-break-after: always"></div>
+<br>
+<table>
  <!-- 3 -->
  <tr>
      <td>
@@ -880,25 +908,32 @@ th {
     
      <div class="col-12">
 				<label class="form-text">ทักษะทางปัญญาที่ต้องพัฒนา </label>
-                   <input id="Cognitiveskills" name="Cognitiveskills" class="form-control"value="<?php echo $rowpro['Cognitive_skills']; ?>"readonly>
+				<textarea id="Cognitiveskills" name="Cognitiveskills" class="form-control" readonly><?php echo $rowpro['Cognitive_skills']; ?>	</textarea>
+   
+				  
                 </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการสอน </label>
-                   <input id="Teachingmethods3" name="Teachingmethods3" class="form-control"value="<?php echo $rowpro['teachingmethods_3']; ?>"readonly>
-                </div>
+                   
+				  
+				   <textarea id="Teachingmethods3" name="Teachingmethods3" class="form-control" readonly><?php echo $rowpro['teachingmethods_3']; ?>	</textarea>
+   
+			    </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการประเมินผล</label>
-                   <input id="Evaluationmethod3" name="Evaluationmethod3" class="form-control"value="<?php echo $rowpro['Evaluationmethod_3']; ?>"readonly>
-                </div>
+                  
+				   <textarea id="Evaluationmethod3" name="Evaluationmethod3" class="form-control" readonly><?php echo $rowpro['Evaluationmethod_3']; ?>	</textarea>
+   
+			   </div>
 			</div> <br>
      </td>		
    
      <td>
      <center>
-       <select name="group3">
-    <option value="มี">มี</option>
-    <option value="ไม่มี">ไม่มี</option>
-  </select>
+	 <div class="col-4">
+                    <label class="form-text"></label>
+                   <input id="group1" name="group1" class="form-control"value="<?php echo $rowpro['group3']; ?>"readonly>
+                </div>
      
        </center>
      </td>				
@@ -915,6 +950,7 @@ th {
  
  <!--4-->
  
+ 
  <tr>
      <td>
          <div class="form-group">
@@ -928,25 +964,35 @@ th {
     
      <div class="col-12">
 				<label class="form-text">ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบที่ต้องพัฒนา  </label>
-                   <input id="Relationshipskills" name="Relationshipskills" class="form-control"value="<?php echo $rowpro['knowledge_1']; ?>"readonly>
-                </div>
+				<textarea id="Relationshipskills" name="Relationshipskills" class="form-control" readonly><?php echo $rowpro['knowledge_1']; ?>	</textarea>
+   
+				
+			    </div>
 				<div class="col">
                     <label class="form-text">วิธีการสอน </label>
-                   <input id="Teachingmethods4" name="Teachingmethods4" class="form-control"value="<?php echo $rowpro['teachingmethods_4']; ?>"readonly>
+					<textarea id="Teachingmethods4" name="Teachingmethods4" class="form-control" readonly><?php echo $rowpro['teachingmethods_4']; ?>	</textarea>
+   
+
+				  
                 </div>
 				<div class="col">
                     <label class="form-text">วิธีการประเมินผล</label>
-                   <input id="Evaluationmethod4" name="Evaluationmethod4" class="form-control"value="<?php echo $rowpro['Evaluationmethod_4']; ?>"readonly>
-                </div>
+                  
+				
+
+				   <textarea id="Evaluationmethod4" name="Evaluationmethod4" class="form-control" readonly><?php echo $rowpro['Evaluationmethod_4']; ?>	</textarea>
+   
+
+			    </div>
 			</div> <br>
      </td>		
    
      <td>
      <center>
-     <select name="group4">
-    <option value="มี">มี</option>
-    <option value="ไม่มี">ไม่มี</option>
-  </select>
+     <div class="col-4">
+                    <label class="form-text"></label>
+                   <input id="group1" name="group1" class="form-control"value="<?php echo $rowpro['group4']; ?>"readonly>
+                </div>
      
   </center>
      </td>				
@@ -958,6 +1004,9 @@ th {
            </div>
 </td>		
  </tr> 
+ </table>
+<div style="page-break-after: always"></div>
+<table>
  <!--5--> 
 <BR>
  <tr>
@@ -974,25 +1023,34 @@ th {
     
 				<div class="form-group col-md-12">
 				<label class="form-text">ทักษะการวิเคราะห์เชิงตัวเลข  การสื่อสาร  และการใช้เทคโนโลยีสารสนเทศที่ต้องพัฒนา   </label>
-                   <input id="NumericSkills" name="NumericSkills" class="form-control"value="<?php echo $rowpro['Numeric_skills']; ?>"readonly>
-                </div>
+                 
+				   <textarea id="NumericSkills" name="NumericSkills" class="form-control" readonly><?php echo $rowpro['Numeric_skills']; ?>	</textarea>
+   
+
+				
+				</div>
 				<div class="col-12">
                     <label class="form-text">วิธีการสอน </label>
-                   <input id="Teachingmethods5" name="Teachingmethods5" class="form-control"value="<?php echo $rowpro['teachingmethods_5']; ?>"readonly>
-                </div>
+                   
+			
+				<textarea id="Teachingmethods5" name="Teachingmethods5" class="form-control" readonly><?php echo $rowpro['teachingmethods_5']; ?>	</textarea>
+   
+			    </div>
 				<div class="col-12">
                     <label class="form-text">วิธีการประเมินผล</label>
-                   <input id="Evaluationmethod5" name="Evaluationmethod5" class="form-control"value="<?php echo $rowpro['Evaluationmethod_5']; ?>"readonly>
-                </div>
+                 
+				   <textarea id="Evaluationmethod5" name="Evaluationmethod5" class="form-control" readonly><?php echo $rowpro['Evaluationmethod_5']; ?>	</textarea>
+   
+			    </div>
 			</div> <br>
      </td>		
    
      <td>
      <center>
-     <select name="group5">
-    <option value="มี">มี</option>
-    <option value="ไม่มี">ไม่มี</option>
-  </select>
+     <div class="col-4">
+                    <label class="form-text"></label>
+                   <input id="group1" name="group1" class="form-control"value="<?php echo $rowpro['group5']; ?> "readonly>
+                </div>
 
      
      </center>
@@ -1010,13 +1068,19 @@ th {
  </table>		
  
  <br>
- 
- <div class="col-12">
- <center> <label class="form-text"> ข้อเสนอการดำเนินการเพื่อปรับปรุงวิธีสอน (ซึ่งได้จากปัญหาที่พบในข้อ 2.3) </label></center>
+ <table>
+ <tr>
+ <th> ข้อเสนอการดำเนินการเพื่อปรับปรุงวิธีสอน (ซึ่งได้จากปัญหาที่พบในข้อ 2.3) </th>
+ <tr>
+ <td>
+ <div class="form-group">
+  <label class="form-text">  </label>
               <textarea id="Improveteaching" name="Improveteaching" class="form-control"readonly> <?php echo $rowpro['Improveteaching']; ?></textarea> 
-                </di    ฏv>
-  
-			
+                </div>
+  </td>
+  </tr>
+  </table>		
+ 	
 <br>
 <hr>
 <br>
@@ -1025,9 +1089,9 @@ th {
 <br>
 <table>
 <tr>
-<th>1. จำนวนนักศึกษาที่ลงทะเบียนเรียน </th>
-<th>2. จำนวนนักศึกษาที่คงอยู่เมื่อสิ้นสุดภาคการศึกษา  </th>
-<th>3. จำนวนนักศึกษาที่ถอน (W) </th>
+ <th> <center>1. จำนวนนักศึกษาที่ลงทะเบียนเรียน </th> </center> 
+  <th><center> 2. จำนวนนักศึกษาที่คงอยู่เมื่อสิ้นสุดภาคการศึกษา  </th> </center> 
+ <th> <center> 3. จำนวนนักศึกษาที่ถอน (W) </th> </center> 
  </tr>
  <tr>
 
@@ -1056,16 +1120,69 @@ th {
 
 
 <br> <br>
-
+<div style="page-break-after: always"></div>
+<br><br>
  <center><h2>4. การกระจายของระดับคะแนน (เกรด)</h2> </center>
  <table border="2px"> 
     <tr>
+	<th>  <center>    </th>  </center>
     <th>  <center>    ระดับคะแนน</th>  </center>
  <th>   <center>   จำนวน </th> </center>
  <th>   <center> คิดเป็นร้อยละ </th> </center>
 	</tr>
 	
 	<tr>
+	<td>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control" value="A"  readonly> 
+
+			    </div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="B+" readonly> 
+                
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="B"readonly> 
+				</div>
+                	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="C+"readonly> 
+				</div>
+                	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="C"readonly> 
+				</div>
+                	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="D+"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="D"readonly> 
+				</div>
+                	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="F"readonly> 
+				</div>
+                	
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input  class="form-control"  value="X"readonly> 
+
+				</div>
+			<div class="form-group">
+                <label class="form-text"></label>
+				<input class="form-control"  value="W"readonly> 
+          </div>
+		</td>	
 		<td>
 			<div class="form-group">
                 <label class="form-text"></label>
@@ -1224,36 +1341,35 @@ th {
 	
 	</table>	
 
-	
+	<br>
 <table>
 <tr>
-<th > ปัจจัยที่ทำให้ระดับคะแนนผิดปกติ</th>
-<th > ความคลาดเคลื่อนจากแผนการประเมินที่กำหนดไว้ในรายละเอียดรายวิชา </th>
+<th> <center> ปัจจัยที่ทำให้ระดับคะแนนผิดปกติ</th>  </center> 
+<th> <center> ความคลาดเคลื่อนจากแผนการประเมินที่กำหนดไว้ในรายละเอียดรายวิชา </th> </center>
 
 
 </tr>
 <tr>
 <td>
-
 <div class="form-group">
  <label class="form-text"></label>
  <textarea id="Factors_to_Rating" name="Factors_to_Rating" class="form-control"readonly>  <?php echo $rowpro['Factors_to_Rating']; ?></textarea> 
 	</td>
 	<td>
-    <div class="form-group ">
+    <div class="form-group">
  <label class="form-text"></label>
  <textarea id="assessment" name="assessment" class="form-control"readonly>  <?php echo $rowpro['assessment']; ?></textarea> 
     </div> 
 	</td>
-	<td>
+	
     
 	</tr>
 	</table>	
 
 	<table>
 <tr>
-<th > ปัจจัยที่ทำให้ระดับคะแนนผิดปกติ</th>
-<th > ความคลาดเคลื่อนด้านวิธีการประเมินผลการเรียนรู้(ถ้ามี) </th>
+<th >  <center> ความคลาดเคลื่อนด้านกำหนดเวลาการประเมิน</th> </center>
+<th > <center> ความคลาดเคลื่อนด้านวิธีการประเมินผลการเรียนรู้(ถ้ามี) </th> </center>
 
 
 </tr>
@@ -1265,6 +1381,9 @@ th {
  <textarea id="Time_deviation " name="Time_deviation" class="form-control"readonly> <?php echo $rowpro['Time_deviation']; ?></textarea> 
     </div> 
 	</td>
+	
+
+
 	<td>
     <div class="form-group ">
  <label class="form-text"></label>
@@ -1278,41 +1397,14 @@ th {
 	
  
     <br>
+	<div style="page-break-after: always"></div>
+	<br><br>
 <center><h2>การทวนสอบผลสัมฤทธิ์ของนักศึกษา</h2></center>
-
-<table>
-<tr>
-<th > ปัจจัยที่ทำให้ระดับคะแนนผิดปกติ</th>
-<th > ความคลาดเคลื่อนจากแผนการประเมินที่กำหนดไว้ในรายละเอียดรายวิชา </th>
-
-
-</tr>
-<tr>
-<td>
-
-<div class="form-group">
- <label class="form-text"></label>
- <textarea id="Factors_to_Rating" name="Factors_to_Rating" class="form-control"readonly>  <?php echo $rowpro['Factors_to_Rating']; ?></textarea> 
-	</td>
-	<td>
-    <div class="form-group ">
- <label class="form-text"></label>
- <textarea id="assessment" name="assessment" class="form-control"readonly>  <?php echo $rowpro['assessment']; ?></textarea> 
-    </div> 
-	</td>
-	<td>
-    
-	</tr>
-	</table>
-
-
-
-
 
 	<table>
 <tr>
-<th > วิธีการทดสอบ</th>
-<th > สรุปผล </th>
+<th > <center> วิธีการทดสอบ</th> </center>
+<th > <center> สรุปผล </th> </center>
 
 
 </tr>
@@ -1338,12 +1430,12 @@ th {
       
 	<center> <h2> หมวดที่ 4  ปัญหาและผลกระทบต่อการดำเนินการ </h2></center>
       <br>
-      <center><h3> ทรัพยากรประกอบการเรียนและสิ่งอำนวยความสะดวก </h3></center>
+      <center><h3> ปัญหาด้านทรัพยากรประกอบการเรียนและสิ่งอำนวยความสะดวก </h3></center>
       
 	  <table>
 <tr>
-<th > ปัญหาในการใช้แหล่งทรัพยากรประกอบการเรียนการสอน (ถ้ามี)</th>
-<th > ผลกระทบ </th>
+<th ><center> ปัญหาในการใช้แหล่งทรัพยากรประกอบการเรียนการสอน (ถ้ามี)</th> </center>
+<th > <center> ผลกระทบ </th> </center>
 
 
 </tr>
@@ -1375,8 +1467,8 @@ th {
            
 	  <table>
 <tr>
-<th > ปัญหาด้านการบริหารและองค์กร  (ถ้ามี)</th>
-<th > ผลกระทบต่อผลการเรียนรู้ของนักศึกษา </th>
+<th ><center> ปัญหาด้านการบริหารและองค์กร  (ถ้ามี)</th></center>
+<th > <center>ผลกระทบต่อผลการเรียนรู้ของนักศึกษา </th></center>
 
 
 </tr>
@@ -1399,13 +1491,15 @@ th {
 	</table>	
 
               <br>
-
+			  <div style="page-break-after: always"></div>
+<br>
             <center>  <h2> หมวดที่ 5  การประเมินรายวิชา </h2> <br></center>
 			<table>
+		
 <tr>
-<th >ผลการประเมินรายวิชาโดยนักศึกษา (แนบเอกสาร) </th>
-<th > ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยนักศึกษา </th>
-<th > ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ </th>
+<th > <center>ผลการประเมินรายวิชาโดยนักศึกษา (แนบเอกสาร) </th></center>
+<th > <center>ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยนักศึกษา </th></center>
+<th > <center>ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ </th></center>
 
 </tr>
 <tr>
@@ -1438,8 +1532,8 @@ th {
          
 <table>
 <tr>
-<th >ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยคณะกรรมการ</th>
-<th > ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ </th>
+<th > <center>ข้อวิพากษ์ที่สำคัญจากผลการประเมินโดยคณะกรรมการ</th></center>
+<th > <center>ความเห็นของอาจารย์ผู้สอนต่อข้อวิพากษ์ตามข้อ </th></center>
 
 
 </tr>
@@ -1463,15 +1557,16 @@ th {
 
 
 <br>
-
+<div style="page-break-after: always"></div>
+<br>
 <center> <h2> หมวดที่ 6  แผนการปรับปรุง </h2> </center>
 <br>
 <h3> ความก้าวหน้าของการปรับปรุงการเรียนการสอนตามที่เสนอในรายงานของรายวิชาครั้งที่ผ่านมา </h3> <br>
 <table>
 <tr>
-<th> แผนการปรับปรุงที่เสนอในภาคการศึกษา / ปีการศึกษาที่ผ่านมา </th>
-<th> ผลการดำเนินการ </th>
-<th> การดำเนินการอื่นๆ ในการปรับปรุงรายวิชา </th>
+<th> <center> แผนการปรับปรุงที่เสนอในภาคการศึกษา / ปีการศึกษาที่ผ่านมา </th> </center>
+<th> <center>ผลการดำเนินการ </th> </center>
+
 </tr>
 <tr>
 <td>
@@ -1487,15 +1582,22 @@ th {
               <textarea id="Results " name="Results" class="form-control"readonly><?php echo $rowpro['Results']; ?> </textarea>
     </div> 
 	</td>
+
+	</tr>
+
+	</table>
+	<table>
+	<tr>
+	<th> การดำเนินการอื่นๆ ในการปรับปรุงรายวิชา </th>
+	<tr>
 	<td>
     <div class="form-group">
- <label class="form-text"></label>
+ <label class="form-text "></label>
               <textarea id=" Other_actions " name="Other_actions" class="form-control"readonly><?php echo $rowpro['Other_actions']; ?></textarea>
     </div> 
 	</td>
 	</tr>
 	</table>
-
     <br>
 	<center> <h2>  ข้อเสนอแผนการปรับปรุงสำหรับภาคการศึกษา / ปีการศึกษาต่อไป </h2></center>
     <br>
@@ -1504,8 +1606,8 @@ th {
 
 <table>
 <tr>
-<th> ข้อเสนอ</th>
-<th> กำหนดเวลาที่แล้วเสร็จ </th>
+<th><center> ข้อเสนอ</th></center>
+<th> <center>กำหนดเวลาที่แล้วเสร็จ </th> </center>
 
 </tr>
 <tr>
@@ -1529,8 +1631,8 @@ th {
    
 <table>
 <tr>
-<th > ผู้รับผิดชอบ</th>
-<th > ข้อเสนอแนะของอาจารย์ผู้รับผิดชอบรายวิชาต่ออาจารย์ผู้รับผิดชอบหลักสูตร </th>
+<th > <center> ผู้รับผิดชอบ</th> </center>
+<th > <center> ข้อเสนอแนะของอาจารย์ผู้รับผิดชอบรายวิชาต่ออาจารย์ผู้รับผิดชอบหลักสูตร </th> </center>
 
 </tr>
 <tr>

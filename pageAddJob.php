@@ -94,7 +94,7 @@ th {
         <form method="POST" id="addform" action="add_job_company.php" name="frmMain">
             
 			
-			<h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2>
+			<center><h2> หมวดที่ 1 ข้อมูลทั่วไป  </h2> </center>
 			<div class="row">
               
 				<div class="col">
@@ -113,7 +113,7 @@ th {
 					
 						<div class="row">
 						<div class="col">
-						 <label class="form-text">Major</label>
+						 <label class="form-text">รหัสวิชา/ชื่อวิชา</label>
 		 <select name="id" id="id" class="form-control"   OnChange="resutName(this.value);">
 			<option value="">
 			<-- Please Select Item -->
@@ -146,8 +146,8 @@ th {
 		<div class="row">
             <div class="form-group col-md-">
                 <label class="form-text">อาจารย์ผู้รับผิดชอบรายวิชาและอาจารย์ผู้สอน </label>
-                <input id="teacher" class="form-control" name="teacher" rows="4"
-			value="<?php require 'get_namethacher.php' ?>"> 
+                <textarea id="teacher" class="form-control" name="teacher" rows="4">
+				<?php require 'get_namethacher.php' ?>    </textarea>
 		   
 		   </div>
             <div class="form-group col-md-4">
@@ -189,15 +189,15 @@ th {
 			
 			<div class="form-group">
                 <label class="form-text">วันที่จัดทำหรือปรับปรุงรายละเอียดวิชาครั้งล่าสุด  </label>
-                <input id="document" class="form-control" name="document"  type="date"  value="2018-11-21"
-       min="2018-01-01" max="2018-12-31" rows="4">
+                <input id="document" class="form-control" name="document"  type="date"  value=""
+       min="2018-12-01" max="2018-12-31" rows="4">
             </div>
           
 		   
 								<!--  หัวข้อที่ 2 --> 
 		  			
 
-					<h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2>
+				<center>	<h2> หมวดที่ 2 จุดมุ่งหมายและวัตถุประสงค์  </h2> </center>
 			
 						
 			<div class="form-group">
@@ -267,18 +267,19 @@ th {
             </div>
 
 
-				<h2> แผนที่แสดงการกระจายความรับผิดชอบต่อผลการเรียนรู้จากหลักสูตรสู่รายวิชา </h2>
+				
 		
-		  
+		  <br>
 			
-	<h2>หมวดที่ 4 การพัฒนาการเรียนรู้ของนักศึกษา</h2>
+<center>	<h2>หมวดที่ 4 การพัฒนาการเรียนรู้ของนักศึกษา</h2> </center>
+<br>
 	
 	
 
 			
 
 <div class="form-group">
-                <label class="form-text">  </label>
+                <label class="form-text">แผนที่แสดงการกระจายความรับผิดชอบต่อผลการเรียนรู้จากหลักสูตรสู่รายวิชา  </label>
 				
                 <textarea name="txtName"  id="txtName" class="form-control" value=""> </textarea>
 </div>
@@ -333,7 +334,8 @@ th {
                     <textarea id="Evaluationmethod3" name="Evaluationmethod3" class="form-control" > </textarea>
 	<hr> 	
 	<br>
-	<h3>ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบ</h3> <hr>
+	<h3>ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบ</h3>
+	<hr>
 	
 	  <div class="form-group ">
                     <label class="form-text">ทักษะความสัมพันธ์ระหว่างบุคคลและความรับผิดชอบที่ต้องพัฒนา </label>
@@ -351,7 +353,8 @@ th {
 	
 	<hr>
 	<br>
-	<h3>5.	ทักษะการวิเคราะห์เชิงตัวเลข  การสื่อสาร  และการใช้เทคโนโลยีสารสนเทศ</h3> <hr>
+	<center> <h3>5.	ทักษะการวิเคราะห์เชิงตัวเลข  การสื่อสาร  และการใช้เทคโนโลยีสารสนเทศ</h3> </center> 
+	<br>
 	
 	  <div class="form-group ">
                     <label class="form-text">ทักษะการวิเคราะห์เชิงตัวเลข  การสื่อสาร  และการใช้เทคโนโลยีสารสนเทศที่ต้องพัฒนา </label>
@@ -366,86 +369,115 @@ th {
 	  <div class="form-group ">
                     <label class="form-text">วิธีการประเมินผล </label>
                     <textarea id="Evaluationmethod5 " name="Evaluationmethod5" class="form-control" > </textarea>
-	<br> <hr>
+	<br> 
 	
 	
+	<table>
+	<tr>
 	
-	<h2> วิธีการสอน (Teaching Approach) และการจัดการเรียนการสอนที่เน้นผู้เรียนเป็นสำคัญ  </h2>
-	<hr>	
-				<center> <h4>     (Student – Centered Approach) </h4> </center>
-	
-	<div> <h5>
+			 <hr> <br>
+			 <h2> วิธีการสอน (Teaching Approach) และการจัดการเรียนการสอนที่เน้นผู้เรียนเป็นสำคัญ  </h2>
+			 <br>
+				 <center> <h4>     (Student – Centered Approach) </h4>    </center>
+				 
+			 <td>
 	<input type="checkbox" name="l[]" value="การบรรยาย (Lecture)"> 
 	 การบรรยาย (Lecture) &nbsp;
 	
 	<input type="checkbox" name="l[]" value="การฝึกปฏิบัติ (Practice)">การฝึกปฏิบัติ (Practice)  &nbsp;
 
 	 <input type="checkbox" name="l[]" value="การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)">การเรียนรู้โดยกิจกรรมโครงงาน (Project-based-Learning)  &nbsp;
-
+	 </td>
+		 </tr>
 	
 
-</h5>	
-	</div> <br>
+
 
 	
-	<div> 
-<h5>
+       <td>
  <input type="checkbox" name="l[]" value="การอภิปราย (Discussion) ">การอภิปราย (Discussion) &nbsp;
 <input type="checkbox" name="l[]" value="การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning) ">การเรียนรู้โดยกิจกรรมการวิจัย(Research-based- Learning) &nbsp;
 <input type="checkbox" name="l[]" value="การเรียนการสอนแบบ (Hybrid Learning System)">การเรียนการสอนแบบ (Hybrid Learning System)  &nbsp;
 
-</h5>
-</div> <br>
-
-<div> 
-<h5>
+ </td>
+			 </tr> 
+				 
+			 
+ <tr>
+ <td>
 <input type="checkbox" name="l[]" value="การสัมมนา (Seminar)">การสัมมนา (Seminar) &nbsp;
 <input type="checkbox" name="l[]" value="การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning)">การเรียนรู้ผ่านเครือข่ายอินเทอร์เน็ต (Online Learning/Internet-based-Learning) &nbsp;
 <input type="checkbox" name="l[]" value="การเรียนรู้เป็นรายบุคคล  (Individual Study) ">การเรียนรู้เป็นรายบุคคล  (Individual Study)  &nbsp;
-</h5>
-</div> <br>
+</td>
+			 </tr>
+			 <td>
 
-<div> 
-<h5>
+
 <input type="checkbox" name="l[]" value="การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study)">การเรียนรู้แบบแสวงหาความรู้ได้ด้วยตนเอง  (Self-study) &nbsp;
 
 <input type="checkbox" name="l[]" value="การเรียนรู้จากการทำงาน (Work-based Learning)"> การเรียนรู้จากการทำงาน (Work-based Learning)&nbsp;
 
 <input type="checkbox" name="l[]" value="กรณีศึกษา (Case Study))...">กรณีศึกษา (Case Study)) ... &nbsp;
-</h5>
-</div> <br> <hr>
+</td>
+			 </table>
+			  <br> <hr>
+
+
+			  <table>
+			  
 	<center> <h4>     สื่อการสอน (Teaching Aids/Instructional Media) </h4> </center>
-<br>
-	<div> 
-<h5>
+	<tr>
+			 <td>
 <input type="checkbox" name="s[]" value="รูปภาพ (Pictures)	">รูปภาพ (Pictures)	 &nbsp;
 <input type="checkbox" name="s[]" value="สื่อนำเสนอในรูปแบบ  PowerPoint"> สื่อนำเสนอในรูปแบบ  PowerPoint &nbsp;
-<input type="checkbox" name="s[]" value="ของจริง (Authentic Material) ">ของจริง (Authentic Material) &nbsp; <br> <br>
+<input type="checkbox" name="s[]" value="ของจริง (Authentic Material) ">ของจริง (Authentic Material) &nbsp; 
+</tr>
+				 </td>
+
+				 <tr>
+				 <td>
 <input type="checkbox" name="s[]" value="สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ ">สื่ออิเล็กทรอนิกส์ (Electronic Media) เช่น Option Finder, VCD,  DVD, e-book ฯลฯ   &nbsp;
-</h5>
-</div> <br> <hr>
+
+</td>
+				 </tr>
+ </table>
+ <br>
+ <table>
+				 
+
 	
 	<center> <h4>     กิจกรรมสำหรับนักศึกษา (Student Activities)</h4> </center>
-<br>
-	<div> 
-<h5>
+	<tr>
+ <td>
+ <div>
 <input type="checkbox" name="s[]" value="การค้นคว้าข้อมูล(Data/Information Search)">การค้นคว้าข้อมูล(Data/Information Search) &nbsp;
 <input type="checkbox" name="s[]" value="เกมส์ (Games)"> เกมส์ (Games)&nbsp;
 <input type="checkbox" name="s[]" value="การระดมสมอง (Brainstorming)">การระดมสมอง (Brainstorming)	&nbsp; 
-<input type="checkbox" name="s[]" value="สสถานการณ์จำลอง (Simulation)">สถานการณ์จำลอง (Simulation) &nbsp;<br><br>
+<input type="checkbox" name="s[]" value="สสถานการณ์จำลอง (Simulation)">สถานการณ์จำลอง (Simulation) &nbsp;
+</td>
+
+</tr>
+<tr>
+				 <td>
 <input type="checkbox" name="s[]" value="การนำเสนอ (Presentation)">การนำเสนอ (Presentation)&nbsp;
 <input type="checkbox" name="s[]" value="การสำรวจข้อมูล (Survey)"> การสำรวจข้อมูล (Survey)	&nbsp;
 <input type="checkbox" name="s[]" value="การแสดงบทบาทสมมติ (Role Play)">การแสดงบทบาทสมมติ (Role Play)	&nbsp; 
-<input type="checkbox" name="s[]" value="การฝึกภาคสนาม (Field Work)">การฝึกภาคสนาม (Field Work) &nbsp; <br><br>
+<input type="checkbox" name="s[]" value="การฝึกภาคสนาม (Field Work)">การฝึกภาคสนาม (Field Work) &nbsp; 
 <input type="checkbox" name="s[]" value="การทดลอง (Experiment) ">การทดลอง (Experiment) &nbsp;
+</td>
+			 </tr>
+			 <tr>
+			 <td>
 <input type="checkbox" name="s[]" value="การศึกษาดูงาน (Field Trip)">การศึกษาดูงาน (Field Trip)	&nbsp;
 <input type="checkbox" name="s[]" value="การเชิญผู้มีประสบการณ์มาสอนเสริม">การเชิญผู้มีประสบการณ์มาสอนเสริม	&nbsp; 
-<input type="checkbox" name="s[]" value=" การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ"> การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ &nbsp;
+<input type="checkbox" name="s[]" value=" การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ"> การส่งนักศึกษาเข้าร่วมกิจกรรมวิชาการ
+</td>
+ </tr>
 
-
-
-</h5>
-
+</table>
+  <br>
+  <br>
+   <CENTER><h2> แผนการสอน</h2>  </CENTER>
 				<table border="2px"> 
 	 <tr>
   <th>  <center>    สัปดาห์ </th>  </center>
@@ -458,28 +490,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week1" name="Week1" class="form-control" type="number" value="<?php echo $rowpro['Week1']; ?>">
+				 <input id="Week1" name="Week1" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics1" name="Topics1" class="form-control" ><?php echo $rowpro['Topics_1']; ?>   </textarea>
+				 <textarea id="Topics1" name="Topics1" class="form-control" ></textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour1" name="hour1" class="form-control"  type="number"value="<?php echo $rowpro['hour1']; ?>"> 
+				 <input id="hour1" name="hour1" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor1" name="Instructor1" class="form-control"   value="<?php echo $rowpro['Instructor1']; ?>"> 
+				 <input id="Instructor1" name="Instructor1" class="form-control"   value="<?php require 'get_namethacher.php' ?>"   > 
 				 </td>
 				 </tr>
  
@@ -488,28 +520,56 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week2" name="Week2" class="form-control" type="number" value="<?php echo $rowpro['Week2']; ?>">
+				 <input id="Week2" name="Week2" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics2" name="Topics2" class="form-control" ><?php echo $rowpro['Topics_2']; ?>   </textarea>
+				 <textarea id="Topics2" name="Topics2" class="form-control" > </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour2" name="hour2" class="form-control"  type="number"value="<?php echo $rowpro['hour2']; ?>"> 
+				 <input id="hour2" name="hour2" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor2" name="Instructor2" class="form-control"   value="<?php echo $rowpro['Instructor2']; ?>"> 
+				 <input id="Instructor2" name="Instructor2" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
+				 </td>
+				 </tr>
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week2" name="Week2" class="form-control" type="number" >
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics2" name="Topics2" class="form-control" > </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour2" name="hour2" class="form-control"  type="number"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor2" name="Instructor2" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -518,28 +578,59 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week3" name="Week3" class="form-control" type="number" value="<?php echo $rowpro['Week3']; ?>">
+				 <input id="Week3" name="Week3" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics3" name="Topics3" class="form-control" ><?php echo $rowpro['Topics_3']; ?>   </textarea>
+				 <textarea id="Topics3" name="Topics3" class="form-control" ></textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour3" name="hour3" class="form-control"  type="number"value="<?php echo $rowpro['hour3']; ?>"> 
+				 <input id="hour3" name="hour3" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor3" name="Instructor3" class="form-control"   value="<?php echo $rowpro['Instructor3']; ?>"> 
+				 <input id="Instructor3" name="Instructor3" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
+				 </td>
+				 </tr>
+ 
+ 
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week4" name="Week4" class="form-control" type="number" >
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics4" name="Topics4" class="form-control" ></textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour4" name="hour4" class="form-control"  type="number"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor4" name="Instructor4" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -548,28 +639,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week5" name="Week5" class="form-control" type="number" value="<?php echo $rowpro['Week5']; ?>">
+				 <input id="Week5" name="Week5" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics5" name="Topics5" class="form-control" ><?php echo $rowpro['Topics_5']; ?>   </textarea>
+				 <textarea id="Topics5" name="Topics5" class="form-control" > </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour5" name="hour5" class="form-control"  type="number"value="<?php echo $rowpro['hour5']; ?>"> 
+				 <input id="hour5" name="hour5" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor5" name="Instructor5" class="form-control"   value="<?php echo $rowpro['Instructor5']; ?>"> 
+				 <input id="Instructor5" name="Instructor5" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -578,28 +669,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week6" name="Week6" class="form-control" type="number" value="<?php echo $rowpro['Week6']; ?>">
+				 <input id="Week6" name="Week6" class="form-control" type="number">
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics6" name="Topics6" class="form-control" ><?php echo $rowpro['Topics_6']; ?>   </textarea>
+				 <textarea id="Topics6" name="Topics6" class="form-control" > </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour6" name="hour6" class="form-control"  type="number"value="<?php echo $rowpro['hour6']; ?>"> 
+				 <input id="hour6" name="hour6" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor6" name="Instructor6" class="form-control"   value="<?php echo $rowpro['Instructor6']; ?>"> 
+				 <input id="Instructor6" name="Instructor6" class="form-control"  value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -608,28 +699,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week7" name="Week7" class="form-control" type="number" value="<?php echo $rowpro['Week7']; ?>">
+				 <input id="Week7" name="Week7" class="form-control" type="number">
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics7" name="Topics7" class="form-control" ><?php echo $rowpro['Topics_7']; ?>   </textarea>
+				 <textarea id="Topics7" name="Topics7" class="form-control" > </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour7" name="hour7" class="form-control"  type="number"value="<?php echo $rowpro['hour7']; ?>"> 
+				 <input id="hour7" name="hour7" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor7" name="Instructor7" class="form-control"   value="<?php echo $rowpro['Instructor7']; ?>"> 
+				 <input id="Instructor7" name="Instructor7" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -638,28 +729,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week8" name="Week8" class="form-control" type="number" value="<?php echo $rowpro['Week8']; ?>">
+				 <input id="Week8" name="Week8" class="form-control" type="number">
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics8" name="Topics8" class="form-control" ><?php echo $rowpro['Topics_8']; ?>   </textarea>
+				 <textarea id="Topics8" name="Topics8" class="form-control" ></textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour8" name="hour8" class="form-control"  type="number"value="<?php echo $rowpro['hour8']; ?>"> 
+				 <input id="hour8" name="hour8" class="form-control" > 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor8" name="Instructor8" class="form-control"   value="<?php echo $rowpro['Instructor8']; ?>"> 
+				 <input id="Instructor8" name="Instructor8" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -668,14 +759,14 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week9" name="Week9" class="form-control" type="number" value="<?php echo $rowpro['Week9']; ?>">
+				 <input id="Week9" name="Week9" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics9" name="Topics9" class="form-control" ><?php echo $rowpro['Topics_9']; ?>   </textarea>
+				 <textarea id="Topics9" name="Topics9" class="form-control" >   </textarea>
 			 </div>
 		 </td>
  
@@ -689,7 +780,7 @@ th {
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor9" name="Instructor9" class="form-control"   value="<?php echo $rowpro['Instructor9']; ?>"> 
+				 <input id="Instructor9" name="Instructor9" class="form-control"   value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -698,28 +789,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week10" name="Week10" class="form-control" type="number" value="<?php echo $rowpro['Week10']; ?>">
+				 <input id="Week10" name="Week10" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics10" name="Topics10" class="form-control" ><?php echo $rowpro['Topics_10']; ?>   </textarea>
+				 <textarea id="Topics10" name="Topics10" class="form-control" >   </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour10" name="hour10" class="form-control"  type="number"value="<?php echo $rowpro['hour10']; ?>"> 
+				 <input id="hour10" name="hour10" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor10" name="Instructor10" class="form-control"   value="<?php echo $rowpro['Instructor10']; ?>"> 
+				 <input id="Instructor10" name="Instructor10" class="form-control"     value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -728,28 +819,28 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week11" name="Week11" class="form-control" type="number" value="<?php echo $rowpro['Week11']; ?>">
+				 <input id="Week11" name="Week11" class="form-control" type="number" >
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics11" name="Topics11" class="form-control" ><?php echo $rowpro['Topics_11']; ?>   </textarea>
+				 <textarea id="Topics11" name="Topics11" class="form-control" > </textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour11" name="hour11" class="form-control"  type="number"value="<?php echo $rowpro['hour11']; ?>"> 
+				 <input id="hour11" name="hour11" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor11" name="Instructor11" class="form-control"   value="<?php echo $rowpro['Instructor11']; ?>"> 
+				 <input id="Instructor11" name="Instructor11" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -758,58 +849,85 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week12" name="Week12" class="form-control" type="number" value="<?php echo $rowpro['Week12']; ?>">
+				 <input id="Week12" name="Week12" class="form-control" type="number">
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics12" name="Topics12" class="form-control" ><?php echo $rowpro['Topics_12']; ?>   </textarea>
+				 <textarea id="Topics12" name="Topics12" class="form-control" ></textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour13" name="hour13" class="form-control"  type="number"value="<?php echo $rowpro['hour12']; ?>"> 
+				 <input id="hour12" name="hour12" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor13" name="Instructor13" class="form-control"   value="<?php echo $rowpro['Instructor12']; ?>"> 
+				 <input id="Instructor12" name="Instructor12" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
- 
- 	 
 				 <tr>
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week14" name="Week14" class="form-control" type="number" value="<?php echo $rowpro['Week14']; ?>">
+				 <input id="Week13" name="Week13" class="form-control" type="number">
 			 </div>
 			 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <textarea id="Topics14" name="Topics14" class="form-control" ><?php echo $rowpro['Topics_14']; ?>   </textarea>
+				 <textarea id="Topics13" name="Topics13" class="form-control" ></textarea>
 			 </div>
 		 </td>
  
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="hour14" name="hour14" class="form-control"  type="number"value="<?php echo $rowpro['hour14']; ?>"> 
+				 <input id="hour13" name="hour13" class="form-control"  type="number"> 
 			 </div>
 			 </td>
  <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor14" name="Instructor14" class="form-control"   value="<?php echo $rowpro['Instructor14']; ?>"> 
+				 <input id="Instructor13" name="Instructor13" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
+				 </td>
+				 </tr>
+ 	 
+				 <tr>
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="Week14" name="Week14" class="form-control" type="number">
+			 </div>
+			 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <textarea id="Topics14" name="Topics14" class="form-control" >  </textarea>
+			 </div>
+		 </td>
+ 
+		 <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				 <input id="hour14" name="hour14" class="form-control"  type="number"> 
+			 </div>
+			 </td>
+ <td>
+			 <div class="form-group">
+				 <label class="form-text"></label>
+				
+				 <input id="Instructor14" name="Instructor14" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  
@@ -818,7 +936,7 @@ th {
 		 <td>
 			 <div class="form-group">
 				 <label class="form-text"></label>
-				 <input id="Week15" name="Week15" class="form-control" type="number" ">
+				 <input id="Week15" name="Week15" class="form-control" type="number" >
 			 </div>
 			 </td>
  
@@ -839,7 +957,7 @@ th {
 			 <div class="form-group">
 				 <label class="form-text"></label>
 				
-				 <input id="Instructor15" name="Instructor15" class="form-control"  > 
+				 <input id="Instructor15" name="Instructor15" class="form-control"    value="<?php require 'get_namethacher.php' ?>"> 
 				 </td>
 				 </tr>
  

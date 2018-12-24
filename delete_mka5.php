@@ -1,8 +1,9 @@
 <?php
         require 'connect.php';
 
-        $j_number = $_GET['j_number'];
-
+ 
+        $number_group = $_GET['number_group'];
+        
         $sql=  "DELETE FROM `group4_mk5`, `group5_mka5`, `group6_mka5`, `group7_mka5`, `group8_mka5`
         USING `group4_mk5`
             INNER JOIN `group5_mka5`
@@ -10,29 +11,41 @@
             INNER JOIN `group7_mka5`
             INNER JOIN `group8_mka5`
        
-     WHERE `group4_mk5`.`j_number` = '$j_number'
-            AND `group5_mka5`.`j_number` = `group4_mk5`.`j_number`
-            AND `group6_mka5`.`j_number` =`group4_mk5`.`j_number`
-            AND `group7_mka5`.`j_number` = `group4_mk5`.`j_number`
-            AND `group8_mka5`.`j_number` =`group4_mk5`.`j_number`";
+     WHERE `group4_mk5`.`number_group` = '$number_group'
+            AND `group5_mka5`.`number_group` = `group4_mk5`.`number_group`
+            AND `group6_mka5`.`number_group` =`group4_mk5`.`number_group`
+            AND `group7_mka5`.`number_group` = `group4_mk5`.`number_group`
+            AND `group8_mka5`.`number_group` =`group4_mk5`.`number_group`";
    
    
-$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
-mysqli_close($con);
+$result = mysqli_query($con, $sql) ;
+
 	//จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
-	if($result1){
-		echo "<script type='text/javascript'>";
-	echo "alert('Save Succesfuly');";
-	echo "window.location = 'mainpage.php'; ";
-	echo "</script>";
+       
+       if($result){
+              $q1 = "DELETE FROM tbl_addjob_mka5 WHERE number_group='$number_group'";
+              $result1 = mysqli_query($con, $q1);
+
+              echo "<script>alert('ทำการลบเรียบร้อย');window.history.back()();</script>";
 		exit();
 	
 	}else {
 	
-			echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+			echo "<script>alert('ทำการลบไม่ได้ ');window.history.back()();</script>";
+		exit();
+		}   
+	if($result1){
+           
+              
+              echo "<script>alert('ทำการลบเรียบร้อย');window.history.back()();</script>";
+		exit();
+	
+	}else {
+	
+			echo "<script>alert('ทำการลบไม่ได้ ');window.history.back()();</script>";
 		exit();
 		}   
 
-    
+              mysqli_close($con);
    
 ?>

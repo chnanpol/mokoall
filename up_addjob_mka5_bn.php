@@ -10,7 +10,8 @@
 
       
 		  $pro_id = $_POST["pro_id"];
-		  
+		    
+		  $number_group = $_POST["number_group"];
  //--------------------------------------------------------------------------------------------------------------//
  $Week1 = $_POST["Week1"];
  $Week2 = $_POST["Week2"];
@@ -206,10 +207,10 @@ WHERE j_number='$pro_id'";
 
 
 	
-if($result5){
+if($result1){
 	echo "<script type='text/javascript'>";
 		echo "alert('Save Succesfuly');";
-		echo "window.location = 'mainpage.php'; ";
+		echo "window.location ='page_moallko5.php'; ";
 		echo "</script>";
 
 	}
@@ -219,10 +220,78 @@ if($result5){
 			}
 			else 
 			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result2){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	}
+
+
 		
+			
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result3){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	
+
+
+		
+			}
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+				exit();
+			}
+			
+if($result4){
+	echo "<script type='text/javascript'>";
+		echo "alert('Save Succesfuly');";
+		echo "window.location ='page_moallko5.php'; ";
+		echo "</script>";
+
+	
+
+
+		
+			}
+			else 
+			{
+				echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
 				exit();
 			}
 
+
+			if($result5){
+				echo "<script type='text/javascript'>";
+					echo "alert('Save Succesfuly');";
+					echo "window.location ='page_moallko5.php'; ";
+					echo "</script>";
+			
+				
+			
+			
+					
+						}
+						else 
+						{
+							echo "<script>alert('ไม่สามารถบันทึกได้ครับ');window.history.back()();</script>";
+							exit();
+						}
 
 mysqli_close($con);
    

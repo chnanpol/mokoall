@@ -12,7 +12,6 @@
     $i = 0;
     while ($row = mysqli_fetch_array($exe_query,MYSQLI_ASSOC)) {
         echo ($row["c_firstname"])."&nbsp;";
-		
         echo ($row["c_lastname"]);
     }
 

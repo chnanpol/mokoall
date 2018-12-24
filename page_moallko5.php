@@ -3,7 +3,9 @@
      require "connect.php";
 $user = $_SESSION['user'];
 
-     $q = "SELECT * FROM tbl_addjob WHERE c_user = '$user'";
+     $q = "SELECT * FROM tbl_addjob A
+     INNER JOIN tbl_addjob_mka5 B ON A.j_number = B.j_number
+     WHERE A.c_user = '$user'";
 
      $result = mysqli_query($con, $q);
  ?>
@@ -29,15 +31,17 @@ $user = $_SESSION['user'];
 </head>
 
 
-<body class=" navbar-light" style="background-color: #e3f2fd";>
-  
    
+
 <body>
-    <img src="./pic/header.jpg" class="img-fluid col-md-12 ">
   
+  <body class=" navbar-light" style="background-color: #e3f2fd";>
+    
+          <!DOCTYPE html>
         <!DOCTYPE html>
         <!-- MENU BAR -->  
-        <nav class="navbar navbar-dark bg-primary">
+        <nav class="navbar navbar-dark bg-dark">
+
      <a class="navbar-brand" href="#">    
      
     <?php  
@@ -79,9 +83,12 @@ $user = $_SESSION['user'];
     <table class="table table-hover table table-bordered ">
          <tr>
 			<!-- <th style="hide" รหัสวิชา> </th>-->
-		  <th><center>ชื่อผู้สอน</th></center>
            <th><center>ชื่อวิชา</th></center>
-           <th><center>ทำเอกสาร ม.อ.ค.5</th></center>
+           <th><center>ภาคการศึกษา</th></center>
+            <th><center>ปีการศึกษา</th></center>
+          
+           <th><center>กลุ่มที่</th></center>
+           
             <th><center>แก้ไข ม.อ.ค.5 </th></center>
             <th><center>ดูเอกสาร</th></center>
            <th><center>ลบ</th></center>
@@ -93,13 +100,16 @@ $user = $_SESSION['user'];
           ?>
        <tr>
      <!--  <td style="hide" <?php echo $row['j_number']; ?>> </td></center> -->
-		  <td><center><?php echo $row['j_teacher']; ?></td></center>
+	
             <td><center><?php echo $row['j_id']; ?></td></center>
-            
-            <td><center><a href="addmokoall_5.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">ทำเอกสาร</button></a></td></center>
-            <td><center><a href="up_addjob_mka5.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
-            <td><center><a href="show_addjob_mka5.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">เอกสารที่เป็น pdf</button></a></td></center>
-            <td><center><a href="JavaScript:if(confirm('Confirm Delete?') == true){window.location='delete_mka5.php?j_number=<?php echo $row["j_number"];?>';}"><button class="btn btn-danger">ลบ</button></a></td></center>
+            <td><center><?php echo $row['j_semester_f']; ?></td></center>
+            <td><center><?php echo $row['j_semester']; ?></td></center>
+
+            <td><center><?php echo $row['number_group']; ?></td></center>
+       
+            <td><center><a href="up_addjob_mka5.php?number_group=<?php echo $row['number_group']; ?>&j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
+            <td><center><a href="show_addjob_mka5.php?number_group=<?php echo $row['number_group']; ?>&j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">เอกสารที่เป็น pdf</button></a></td></center>
+            <td><center><a href="JavaScript:if(confirm('Confirm Delete?') == true){window.location='delete_mka5.php?number_group=<?php echo $row['number_group']; ?>&j_number=<?php echo $row["j_number"];?>';}"><button class="btn btn-danger">ลบ</button></a></td></center>
        </tr>
 
 

@@ -31,12 +31,14 @@ $user = $_SESSION['user'];
 <body>
   
 <body class=" navbar-light" style="background-color: #e3f2fd;>
-    <img src="./pic/header.jpg" class="img-fluid col-md-12 ">
+   
+   <img src="./pic/header.jpg" class="img-fluid col-md-12 ">
  
         <!DOCTYPE html>
         <!-- MENU BAR -->  
-        <nav class="navbar navbar-dark bg-primary">
-     <a class="navbar-brand" href="#">    
+        <nav class="navbar navbar-dark  bg-dark">
+     <a class="navbar-brand" href="#">        
+        <!DOCTYPE html>
      <?php  
   echo ' ชื่อผู้ใช้' ;
   echo '&nbsp';
@@ -80,7 +82,7 @@ $user = $_SESSION['user'];
 		  <th><center>ขื่อวิชา</th></center>
             <th><center>ภาคการศึกษา</th></center>
             <th><center>ปีการศึกษา</th></center>
-          
+            <th><center>ทำเอกสาร ม.อ.ค.5</th></center>
            <th><center>ดูเอกสาร</th></center>
             <th><center>แก้ไข</th></center>
            <th><center>ลบ</th></center>
@@ -96,7 +98,8 @@ $user = $_SESSION['user'];
             <td><center><?php echo $row['j_semester_f']; ?></td></center>
             <td><center><?php echo $row['j_semester']; ?></td></center>
        
-            <td><center><a href="show_addjob.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
+            <td><center><a href="addmokoall_5.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">ทำเอกสาร</button></a></td></center>
+            <td><center><a href="show_addjob.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">ดูเอกสาร</button></a></td></center>
             <td><center><a href="up_addjob.php?j_number=<?php echo $row['j_number']; ?>"><button class="btn btn-success">แก้ไข</button></a></td></center>
             <td><center><a href="JavaScript:if(confirm('Confirm Delete?') == true){window.location='delete_mokoall.php?j_number=<?php echo $row["j_number"];?>';}"><button class="btn btn-danger">ลบ</button></a></td></center>
           

@@ -20,19 +20,19 @@
 $result = mysqli_query($con, $sql);
 mysqli_close($con);
 	//จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
-	if($result1){
-		echo "<script type='text/javascript'>";
-	echo "alert('Save Succesfuly');";
-	echo "window.location = 'mainpage.php'; ";
-	echo "</script>";
+	if($result){
+		echo "<script>alert('ทำการลบข้อมูลเรียบร้อย');window.history.back()();</script>";
 		exit();
+	
 	
 	}else {
 	
-			echo "<script>alert('ทำการลบข้อมูลเรียบร้อย');window.history.back()();</script>";
+			echo "<script>alert('ทำการลบข้อมูลไม่สำเร็จ');window.history.back()();</script>";
 		exit();
 		}   
 
-    
-   
+
+
+
+
 ?>
